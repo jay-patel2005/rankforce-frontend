@@ -1,0 +1,4 @@
+// Section component placeholders — implement in the UI build phase
+// Hero, Services, WhyChooseUs, CTA, Testimonials
+
+export {};

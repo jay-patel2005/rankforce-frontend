@@ -1,0 +1,4 @@
+// UI Component placeholders — implement in the UI build phase
+// Button, Card, Badge, Input, Textarea, etc.
+
+export {};

@@ -1,17 +1,32 @@
 {
-  "name": "client",
+  "name": "rankwithjd-client",
   "version": "0.1.0",
   "private": true,
   "scripts": {
     "dev": "next dev",
-    "build": "next build",
+    "build": "next build && next-sitemap",
+    "postbuild": "next-sitemap",
     "start": "next start",
     "lint": "eslint"
   },
   "dependencies": {
+    "@headlessui/react": "^2.2.10",
+    "@hookform/resolvers": "^5.7.1",
+    "axios": "^1.19.0",
+    "cloudinary": "^2.10.0",
+    "clsx": "^2.1.1",
+    "embla-carousel-react": "^8.6.0",
+    "framer-motion": "^13.0.0",
+    "lucide-react": "^1.30.0",
     "next": "16.3.0",
+    "next-cloudinary": "^6.18.8",
+    "next-seo": "^7.3.0",
+    "next-sitemap": "^4.2.3",
     "react": "19.2.8",
-    "react-dom": "19.2.8"
+    "react-countup": "^6.5.3",
+    "react-dom": "19.2.8",
+    "react-hook-form": "^7.85.0",
+    "zod": "^4.4.3"
   },
   "devDependencies": {
     "@tailwindcss/postcss": "^4",
