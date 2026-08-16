@@ -264,7 +264,6 @@ export default function Navbar() {
           />
         </button>
       </nav>
-    </header>
 
       {/* ── Desktop mega menu panel ───────────────────── */}
       <AnimatePresence>
@@ -276,6 +275,7 @@ export default function Navbar() {
           />
         )}
       </AnimatePresence>
+    </header>
 
       {/* ── Mobile drawer ────────────────────────────── */}
       <AnimatePresence>
