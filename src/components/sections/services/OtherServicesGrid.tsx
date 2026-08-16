@@ -61,7 +61,7 @@ export default function OtherServicesGrid() {
       opacity: 1, 
       scale: 1,
       y: 0,
-      transition: { duration: 0.5, ease: "easeOut" }
+      transition: { duration: 0.5, ease: "easeOut" as any }
     },
   };
 
@@ -70,7 +70,7 @@ export default function OtherServicesGrid() {
     visible: { 
       opacity: 1, 
       y: 0,
-      transition: { duration: 0.5, ease: "easeOut" }
+      transition: { duration: 0.5, ease: "easeOut" as any }
     },
   };
 

@@ -47,7 +47,7 @@ export default function ServicesFaqAccordion() {
     visible: { 
       opacity: 1, 
       y: 0,
-      transition: { duration: 0.5, ease: "easeOut" }
+      transition: { duration: 0.5, ease: "easeOut" as any }
     },
   };
 
@@ -56,7 +56,7 @@ export default function ServicesFaqAccordion() {
     visible: { 
       opacity: 1, 
       y: 0,
-      transition: { duration: 0.5, ease: "easeOut" }
+      transition: { duration: 0.5, ease: "easeOut" as any }
     },
   };
 
@@ -108,16 +108,18 @@ export default function ServicesFaqAccordion() {
                     </Disclosure.Button>
                     <AnimatePresence>
                       {open && (
-                        <Disclosure.Panel static as={motion.div}
-                          initial={{ height: 0, opacity: 0 }}
-                          animate={{ height: "auto", opacity: 1 }}
-                          exit={{ height: 0, opacity: 0 }}
-                          transition={{ duration: 0.3, ease: "easeInOut" }}
-                          className="overflow-hidden"
-                        >
-                          <div className="px-6 pb-5 text-[15px] leading-relaxed text-gray-body">
-                            {faq.answer}
-                          </div>
+                        <Disclosure.Panel static>
+                          <motion.div
+                            initial={{ height: 0, opacity: 0 }}
+                            animate={{ height: "auto", opacity: 1 }}
+                            exit={{ height: 0, opacity: 0 }}
+                            transition={{ duration: 0.3, ease: "easeInOut" }}
+                            className="overflow-hidden"
+                          >
+                            <div className="px-6 pb-5 text-[15px] leading-relaxed text-gray-body">
+                              {faq.answer}
+                            </div>
+                          </motion.div>
                         </Disclosure.Panel>
                       )}
                     </AnimatePresence>

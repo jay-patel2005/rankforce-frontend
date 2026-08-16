@@ -37,7 +37,7 @@ export default function ProcessSection() {
     visible: { 
       opacity: 1, 
       y: 0,
-      transition: { duration: 0.5, ease: "easeOut" }
+      transition: { duration: 0.5, ease: "easeOut" as any }
     },
   };
 
@@ -55,7 +55,7 @@ export default function ProcessSection() {
     visible: { 
       opacity: 1, 
       scale: 1,
-      transition: { duration: 0.4, ease: "backOut" }
+      transition: { duration: 0.4, ease: "backOut" as any }
     },
   };
 
@@ -63,7 +63,7 @@ export default function ProcessSection() {
     hidden: { width: "0%" },
     visible: { 
       width: "100%",
-      transition: { duration: 1.5, ease: "easeInOut" }
+      transition: { duration: 1.5, ease: "easeInOut" as any }
     },
   };
 
@@ -71,7 +71,7 @@ export default function ProcessSection() {
     hidden: { height: "0%" },
     visible: { 
       height: "100%",
-      transition: { duration: 0.5, ease: "easeInOut" }
+      transition: { duration: 0.5, ease: "easeInOut" as any }
     },
   };
 
