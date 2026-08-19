@@ -1,9 +1,9 @@
 import type { Metadata } from 'next';
 
 export const metadata: Metadata = {
-  title: 'Blog | RankWithJD — SEO Tips & Digital Marketing Insights',
+  title: 'Blog | Rank Force — SEO Tips & Digital Marketing Insights',
   description:
-    'Read in-depth SEO guides, digital marketing tips, and case studies from RankWithJD.',
+    'Read in-depth SEO guides, digital marketing tips, and case studies from Rank Force.',
 };
 
 export default function BlogPage() {

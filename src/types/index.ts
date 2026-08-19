@@ -1,4 +1,4 @@
-// Common TypeScript interfaces for RankWithJD
+// Common TypeScript interfaces for Rank Force
 
 export interface Service {
   id: string;

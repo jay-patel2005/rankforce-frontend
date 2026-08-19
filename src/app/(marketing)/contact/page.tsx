@@ -1,7 +1,7 @@
 import type { Metadata } from 'next';
 
 export const metadata: Metadata = {
-  title: 'Contact | RankWithJD — Get a Free SEO Audit',
+  title: 'Contact | Rank Force — Get a Free SEO Audit',
   description:
     'Ready to grow your business online? Contact JD today for a free SEO consultation and website audit.',
 };

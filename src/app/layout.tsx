@@ -11,8 +11,8 @@ const inter = Inter({
 
 export const metadata: Metadata = {
   title: {
-    default: "RankWithJD — Freelance SEO Expert | Grow Your Leads & Sales",
-    template: "%s | RankWithJD",
+    default: "Rank Force — Freelance SEO Expert | Grow Your Leads & Sales",
+    template: "%s | Rank Force",
   },
   description:
     "Expert freelance SEO services that grow your leads, traffic, and sales. Get transparent, results-driven SEO from JD — 4+ years experience helping businesses rank higher.",
@@ -25,7 +25,7 @@ export const metadata: Metadata = {
     "ecommerce SEO",
     "technical SEO",
     "content marketing",
-    "RankWithJD",
+    "Rank Force",
   ],
   authors: [{ name: "JD", url: "https://rankwithjd.com" }],
   creator: "JD",
@@ -33,14 +33,14 @@ export const metadata: Metadata = {
     type: "website",
     locale: "en_US",
     url: "https://rankwithjd.com",
-    siteName: "RankWithJD",
-    title: "RankWithJD — Freelance SEO Expert | Grow Your Leads & Sales",
+    siteName: "Rank Force",
+    title: "Rank Force — Freelance SEO Expert | Grow Your Leads & Sales",
     description:
       "Expert freelance SEO services that grow your leads, traffic, and sales.",
   },
   twitter: {
     card: "summary_large_image",
-    title: "RankWithJD — Freelance SEO Expert",
+    title: "Rank Force — Freelance SEO Expert",
     description:
       "Expert freelance SEO services that grow your leads, traffic, and sales.",
   },

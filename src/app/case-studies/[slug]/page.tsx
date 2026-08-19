@@ -7,8 +7,8 @@ interface Props {
 export async function generateMetadata({ params }: Props): Promise<Metadata> {
   const { slug } = await params;
   return {
-    title: `${slug.replace(/-/g, ' ')} | Case Studies | RankWithJD`,
-    description: `See how RankWithJD delivered real results in this ${slug.replace(/-/g, ' ')} case study.`,
+    title: `${slug.replace(/-/g, ' ')} | Case Studies | Rank Force`,
+    description: `See how Rank Force delivered real results in this ${slug.replace(/-/g, ' ')} case study.`,
   };
 }
 

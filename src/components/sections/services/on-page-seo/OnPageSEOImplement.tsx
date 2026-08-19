@@ -13,8 +13,19 @@ export function OnPageSEOImplement() {
   ];
 
   return (
-    <section className="relative bg-[#FFF8F2] py-20 lg:py-28 overflow-visible">
-      <div className="max-w-[1240px] mx-auto px-6 lg:px-8 relative z-10">
+    <section 
+      className="relative pt-20 pb-10 lg:pt-28 lg:pb-16 overflow-visible bg-[#FFF8F2]"
+      style={{ background: 'radial-gradient(circle at 15% 50%, rgba(255, 106, 0, 0.04), transparent 45%), #FFF8F2' }}
+    >
+      <style>{`
+        @media (prefers-reduced-motion: reduce) {
+          .seo-glass-cards * {
+            animation-duration: 0.01ms !important;
+            transition-duration: 0.01ms !important;
+          }
+        }
+      `}</style>
+      <div className="max-w-[1240px] mx-auto px-6 lg:px-8 relative z-10 seo-glass-cards">
         
         {/* Mobile Layout: Stacked, Left content first */}
         <div className="block lg:hidden mb-12">
@@ -46,16 +57,19 @@ export function OnPageSEOImplement() {
           </div>
 
           {/* RIGHT COLUMN - SCROLLING CARDS */}
-          <div className="flex flex-col gap-6">
+          <div className="flex flex-col gap-[24px]">
             {cards.map((card, i) => (
               <div 
                 key={i} 
-                className="bg-white rounded-2xl p-6 lg:p-8 flex gap-6 items-start shadow-[0_2px_10px_rgba(0,0,0,0.02)] border border-[#E5E5E5] hover:border-[#FFE8D6] hover:shadow-[0_8px_30px_rgba(255,106,0,0.06)] transition-all duration-300"
+                className="group relative overflow-hidden bg-[rgba(255,255,255,0.55)] backdrop-blur-[14px] rounded-[18px] border border-[rgba(255,106,0,0.12)] shadow-[0_8px_30px_rgba(31,41,55,0.06)] p-6 lg:px-[30px] lg:py-[24px] min-h-[145px] box-border flex gap-6 items-center transition-all duration-300 ease-out hover:-translate-y-[6px] hover:scale-[1.01] hover:border-[rgba(255,106,0,0.30)] hover:bg-[rgba(255,241,230,0.75)] hover:shadow-[0_18px_45px_rgba(255,106,0,0.12)]"
               >
-                <div className="w-12 h-12 rounded-xl bg-[#FFF1E6] text-[#FF6A00] flex-shrink-0 flex items-center justify-center font-bold text-lg">
+                {/* Subtle Glass Shine Effect */}
+                <div className="absolute inset-0 -translate-x-[150%] bg-gradient-to-r from-transparent via-[rgba(255,255,255,0.6)] to-transparent -skew-x-12 transition-transform duration-[700ms] ease-out group-hover:translate-x-[150%] pointer-events-none" />
+
+                <div className="w-12 h-12 rounded-[14px] bg-[#FFF1E6] border border-[rgba(255,106,0,0.12)] text-[#FF6A00] flex-shrink-0 flex items-center justify-center font-bold text-lg transition-all duration-300 ease-out group-hover:scale-[1.08] group-hover:bg-[#FFE4CC] z-10">
                   {card.icon}
                 </div>
-                <div>
+                <div className="z-10">
                   <h3 className="text-[18px] font-bold text-[#1A1A1A] mb-2">{card.title}</h3>
                   <p className="text-[15px] text-[#4B4B4B] leading-relaxed">{card.desc}</p>
                 </div>

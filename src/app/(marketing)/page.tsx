@@ -13,9 +13,9 @@ import FinalCta from '@/components/sections/FinalCta';
 import Footer from '@/components/layout/Footer';
 
 export const metadata: Metadata = {
-  title: 'RankWithJD — Freelance SEO Expert | Grow Your Leads & Sales',
+  title: 'Rank Force — Freelance SEO Expert | Grow Your Leads & Sales',
   description:
-    'Grow your business online with expert SEO, content marketing, and digital strategy. RankWithJD delivers measurable results.',
+    'Grow your business online with expert SEO, content marketing, and digital strategy. Rank Force delivers measurable results.',
 };
 
 export default function HomePage() {
@@ -43,7 +43,7 @@ export default function HomePage() {
           __html: JSON.stringify({
             "@context": "https://schema.org",
             "@type": "ProfessionalService",
-            "name": "RankWithJD",
+            "name": "Rank Force",
             "image": "https://rankwithjd.com/logo.png",
             "@id": "https://rankwithjd.com",
             "url": "https://rankwithjd.com",

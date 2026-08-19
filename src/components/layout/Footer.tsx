@@ -29,8 +29,8 @@ export default function Footer() {
           {/* Brand Col */}
           <div className="flex flex-col gap-6">
             <Link href="/" className="flex items-center gap-0.5 text-2xl font-bold tracking-tight">
-              <span className="text-white">RankWith</span>
-              <span className="text-primary">JD</span>
+              <span className="text-white">Rank</span>
+              <span className="text-primary ml-1">Force</span>
             </Link>
             <p className="text-[15px] leading-relaxed text-white/70">
               Honest, data-driven SEO services that help businesses rank higher, drive qualified traffic, and grow revenue.
@@ -114,7 +114,7 @@ export default function Footer() {
 
         {/* Bottom Bar */}
         <div className="flex flex-col items-center justify-between gap-4 border-t border-white/10 py-8 text-sm text-white/50 md:flex-row">
-          <p>&copy; {currentYear} RankWithJD. All rights reserved.</p>
+          <p>&copy; {currentYear} Rank Force. All rights reserved.</p>
           <div className="flex gap-6">
             <Link href="/privacy-policy" className="transition-colors hover:text-white">Privacy Policy</Link>
             <Link href="/terms" className="transition-colors hover:text-white">Terms of Service</Link>

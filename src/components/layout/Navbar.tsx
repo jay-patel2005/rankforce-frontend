@@ -173,8 +173,8 @@ export default function Navbar() {
           href="/"
           className="flex items-center gap-0.5 text-2xl font-bold tracking-tight z-50"
         >
-          <span className="text-dark-800">RankWith</span>
-          <span className="text-primary">JD</span>
+          <span className="text-dark-800">Rank</span>
+          <span className="text-primary ml-1">Force</span>
         </Link>
 
         {/* Desktop Nav */}

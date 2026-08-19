@@ -34,7 +34,7 @@ export default function HeroDashboardCard() {
             <div className="w-2.5 h-2.5 rounded-full bg-green-400" />
           </div>
           <div className="text-[10px] font-medium text-gray-400 flex items-center gap-2">
-            rankwithjd.in <span className="text-gray-300">•</span> dashboard
+            rankforce.com <span className="text-gray-300">•</span> dashboard
           </div>
           <div className="flex items-center gap-1.5 bg-gray-900 text-white px-2 py-0.5 rounded-full text-[9px] font-bold tracking-wider">
             <motion.div

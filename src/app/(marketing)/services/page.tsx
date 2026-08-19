@@ -2,7 +2,7 @@ import type { Metadata } from 'next';
 import Script from 'next/script';
 import Navbar from '@/components/layout/Navbar';
 import Footer from '@/components/layout/Footer';
-import FinalCta from '@/components/sections/FinalCta';
+import { GlobalCTA } from '@/components/sections/GlobalCTA';
 
 import PageHero from '@/components/sections/services/PageHero';
 import CoreSeoServicesGrid from '@/components/sections/services/CoreSeoServicesGrid';
@@ -13,22 +13,22 @@ import PricingSection from '@/components/sections/services/PricingSection';
 import ServicesFaqAccordion from '@/components/sections/services/ServicesFaqAccordion';
 
 export const metadata: Metadata = {
-  title: 'SEO & Digital Marketing Services | RankWithJD',
+  title: 'SEO & Digital Marketing Services | Rank Force',
   description: 'Comprehensive SEO and digital marketing services tailored to your business goals. Grow your organic traffic, leads, and revenue.',
   alternates: {
     canonical: 'https://rankwithjd.com/services',
   },
   openGraph: {
-    title: 'SEO & Digital Marketing Services | RankWithJD',
+    title: 'SEO & Digital Marketing Services | Rank Force',
     description: 'Comprehensive SEO and digital marketing services tailored to your business goals. Grow your organic traffic, leads, and revenue.',
     url: 'https://rankwithjd.com/services',
-    siteName: 'RankWithJD',
+    siteName: 'Rank Force',
     images: [
       {
         url: 'https://rankwithjd.com/images/og-services.jpg',
         width: 1200,
         height: 630,
-        alt: 'RankWithJD SEO Services',
+        alt: 'Rank Force SEO Services',
       },
     ],
     locale: 'en_US',
@@ -36,7 +36,7 @@ export const metadata: Metadata = {
   },
   twitter: {
     card: 'summary_large_image',
-    title: 'SEO & Digital Marketing Services | RankWithJD',
+    title: 'SEO & Digital Marketing Services | Rank Force',
     description: 'Comprehensive SEO and digital marketing services tailored to your business goals. Grow your organic traffic, leads, and revenue.',
     images: ['https://rankwithjd.com/images/og-services.jpg'],
   },
@@ -48,7 +48,7 @@ const jsonLd = {
   serviceType: 'SEO & Digital Marketing Services',
   provider: {
     '@type': 'LocalBusiness',
-    name: 'RankWithJD',
+    name: 'Rank Force',
     url: 'https://rankwithjd.com'
   },
   hasOfferCatalog: {
@@ -124,7 +124,7 @@ export default function ServicesPage() {
         <WhyChooseMe />
         <PricingSection />
         <ServicesFaqAccordion />
-        <FinalCta />
+        <GlobalCTA />
       </main>
       <Footer />
     </>
