@@ -2,6 +2,7 @@
 
 import { useState, useEffect, useRef, useCallback } from "react";
 import Link from "next/link";
+import Image from "next/image";
 import { motion, AnimatePresence } from "framer-motion";
 import { ChevronDown, ChevronRight, ArrowLeft } from "lucide-react";
 import {
@@ -168,13 +169,22 @@ export default function Navbar() {
     >
       {/* ── Main nav bar ─────────────────────────────── */}
       <nav className="mx-auto flex max-w-7xl items-center justify-between px-5 py-4 lg:px-8">
-        {/* Logo */}
         <Link
           href="/"
-          className="flex items-center gap-0.5 text-2xl font-bold tracking-tight z-50"
+          className="flex items-center gap-2 z-50"
         >
-          <span className="text-dark-800">Rank</span>
-          <span className="text-primary ml-1">Force</span>
+          <Image 
+            src="/rankforce-logo.png" 
+            alt="Rank Force Logo" 
+            width={48} 
+            height={48} 
+            className="h-10 w-auto object-contain"
+            priority
+          />
+          <div className="flex items-center text-2xl font-bold tracking-tight mt-1">
+            <span className="text-dark-800">Rank</span>
+            <span className="text-primary ml-1">Force</span>
+          </div>
         </Link>
 
         {/* Desktop Nav */}

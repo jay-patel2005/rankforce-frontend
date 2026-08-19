@@ -1,4 +1,5 @@
 import Link from "next/link";
+import Image from "next/image";
 import { Mail, MapPin, Phone } from "lucide-react";
 
 const TwitterIcon = ({ size }: { size: number }) => (
@@ -28,9 +29,18 @@ export default function Footer() {
         <div className="grid gap-12 pb-16 md:grid-cols-2 lg:grid-cols-4 lg:gap-8">
           {/* Brand Col */}
           <div className="flex flex-col gap-6">
-            <Link href="/" className="flex items-center gap-0.5 text-2xl font-bold tracking-tight">
-              <span className="text-white">Rank</span>
-              <span className="text-primary ml-1">Force</span>
+            <Link href="/" className="flex items-center gap-2">
+              <Image 
+                src="/rankforce-logo.png" 
+                alt="Rank Force Logo" 
+                width={48} 
+                height={48} 
+                className="h-10 w-auto object-contain"
+              />
+              <div className="flex items-center text-2xl font-bold tracking-tight mt-1">
+                <span className="text-white">Rank</span>
+                <span className="text-primary ml-1">Force</span>
+              </div>
             </Link>
             <p className="text-[15px] leading-relaxed text-white/70">
               Honest, data-driven SEO services that help businesses rank higher, drive qualified traffic, and grow revenue.
