@@ -18,7 +18,7 @@ const faqs = [
     answer: "You can start with the checklist above yourself. But if you want faster, more consistent results, professional on-page SEO services are usually worth it.",
   },
   {
-    question: "What on-page SEO strategies should I prioritize first?",
+    question: "What on page SEO strategies should I prioritize first?",
     answer: "Start with title tags, header structure, and matching content to search intent — these on-page SEO strategies typically produce the fastest visible movement.",
   },
   {

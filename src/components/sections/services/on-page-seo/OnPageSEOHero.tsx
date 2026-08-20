@@ -17,12 +17,12 @@ export function OnPageSEOHero() {
             </span>
             
             <h1 className="text-[38px] lg:text-[56px] font-extrabold leading-[1.08] text-[#1A1A1A] m-0">
-              Best <span className="text-[#FF6A00]">On-Page SEO</span><br className="hidden lg:block" /> Strategy Guide for<br className="hidden lg:block" /> Growing Businesses
+              Best <span className="text-[#FF6A00]">On Page SEO</span><br className="hidden lg:block" /> Strategy Guide for<br className="hidden lg:block" /> Growing Businesses
             </h1>
             <br/>
             <br/>
             <p className="text-[17px] lg:text-[18px] leading-[1.6] text-[#6B6B6B] mt-12 max-w-[560px]">
-              Everything you need to know about on-page SEO — the types of on-page SEO, how to check on-page SEO issues, and the strategies that consistently move rankings.
+              Everything you need to know about on page SEO — the types of on page SEO, how to check on page SEO issues, and the strategies that consistently move rankings.
             </p>
             
             <div className="mt-8">

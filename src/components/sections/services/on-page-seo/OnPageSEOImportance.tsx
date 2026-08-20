@@ -64,16 +64,16 @@ export function OnPageSEOImportance() {
           {/* Left Content */}
           <div className="max-w-[540px]">
             <h3 className="text-[22px] lg:text-[24px] font-bold text-[#1A1A1A] mb-8 leading-snug">
-              What Makes On-Page SEO Important for Your Website?
+              What Makes On Page SEO Important for Your Website?
             </h3>
             <p className="text-[17px] text-[#4B4B4B] leading-[1.8] mb-6 text-justify">
-              On-page SEO refers to everything you can optimize directly on your website's pages to help them rank higher and attract the right visitors — your title tag, headings, keyword usage, internal links, images, and overall page experience.
+              On page refers to everything you can optimize directly on your website's pages to help them rank higher and attract the right visitors — your title tag, headings, keyword usage, internal links, images, and overall page experience.
             </p>
             <p className="text-[17px] text-[#4B4B4B] leading-[1.8] mb-6 text-justify">
               It's different from off-page SEO (backlinks, mentions) and technical SEO (speed, crawlability). On-page SEO is the part fully within your control, and it's the foundation everything else is built on. Get it right, and search engines can clearly understand and reward your content.
             </p>
             <p className="text-[17px] text-[#4B4B4B] leading-[1.8] text-justify">
-              This is exactly why on-page SEO deserves priority — without it, even the best off-page campaigns struggle to hold rankings long-term.
+              This is exactly why on page deserves priority — without it, even the best off-page campaigns struggle to hold rankings long-term.
             </p>
           </div>
 

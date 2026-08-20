@@ -25,7 +25,7 @@ const testimonials = [
     id: 3,
     name: "Placeholder Client 3",
     role: "Marketing Director",
-    text: "Clear on-page SEO strategies, honest reporting, and steady organic growth every month.",
+    text: "Clear on page SEO strategies, honest reporting, and steady organic growth every month.",
     image: "https://ui-avatars.com/api/?name=Client+3&background=FF6A00&color=fff",
   },
 ];

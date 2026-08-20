@@ -160,32 +160,39 @@ export default function Navbar() {
 
   return (
     <>
-      <header
-        className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${
-        scrolled
-          ? "bg-white/95 backdrop-blur-md shadow-[var(--shadow-navbar)]"
-          : "bg-white"
-      }`}
-    >
-      {/* ── Main nav bar ─────────────────────────────── */}
-      <nav className="mx-auto flex max-w-7xl items-center justify-between px-5 py-4 lg:px-8">
-        <Link
-          href="/"
-          className="flex items-center gap-2 z-50"
+      <header className="fixed top-0 left-0 right-0 z-50 pointer-events-none">
+        <div
+          className={`mx-auto transition-all duration-400 ease-in-out pointer-events-auto ${
+            scrolled
+              ? "bg-white/95 lg:bg-white/80 backdrop-blur-md lg:backdrop-blur-[16px] shadow-[var(--shadow-navbar)] lg:shadow-[0_8px_32px_rgba(0,0,0,0.08)] lg:border lg:border-[#FF6A00]/15 lg:rounded-2xl lg:max-w-[1100px] lg:mt-3"
+              : "bg-white w-full"
+          }`}
         >
-          <Image 
-            src="/rankforce-logo.png" 
-            alt="Rank Force Logo" 
-            width={48} 
-            height={48} 
-            className="h-10 w-auto object-contain"
-            priority
-          />
-          <div className="flex items-center text-2xl font-bold tracking-tight mt-1">
-            <span className="text-dark-800">Rank</span>
-            <span className="text-primary ml-1">Force</span>
-          </div>
-        </Link>
+          {/* ── Main nav bar ─────────────────────────────── */}
+          <nav className={`mx-auto flex items-center justify-between px-5 transition-all duration-400 ease-in-out ${
+            scrolled ? "py-2 lg:px-6 max-w-[1100px]" : "py-4 lg:px-8 max-w-7xl"
+          }`}>
+            <Link
+              href="/"
+              className="flex items-center z-50 group"
+            >
+              <div className="relative flex items-center justify-center h-16 w-16 shrink-0">
+                <Image 
+                  src="/rankforce-logo.webp" 
+                  alt="Rank Force Logo" 
+                  width={96} 
+                  height={96} 
+                  className="absolute max-w-none w-[140%] h-[140%] object-contain mix-blend-multiply"
+                  priority
+                />
+              </div>
+              <div className={`flex items-center text-2xl font-bold tracking-tight mt-1 transition-all duration-400 ease-in-out overflow-hidden max-w-[200px] opacity-100 ml-1 ${
+                scrolled ? "lg:max-w-0 lg:opacity-0 lg:ml-0" : ""
+              }`}>
+                <span className="text-dark-800 whitespace-nowrap group-hover:text-primary transition-colors duration-300">Rank</span>
+                <span className="text-primary ml-1 whitespace-nowrap group-hover:text-dark-800 transition-colors duration-300">Force</span>
+              </div>
+            </Link>
 
         {/* Desktop Nav */}
         <ul className="hidden items-center gap-8 lg:flex">
@@ -285,6 +292,7 @@ export default function Navbar() {
           />
         )}
       </AnimatePresence>
+      </div>
     </header>
 
       {/* ── Mobile drawer ────────────────────────────── */}

@@ -15,9 +15,9 @@ import { FeaturedBlogs } from '@/components/sections/FeaturedBlogs';
 import { OnPageSEOTestimonials } from '@/components/sections/services/on-page-seo/OnPageSEOTestimonials';
 
 export const metadata: Metadata = {
-  title: 'On-Page SEO: The Complete Guide to Higher Rankings in 2026 | Rank Force',
+  title: 'On Page SEO Services | Improve Rankings & Organic Traffic',
   description:
-    'Learn what on-page SEO is, the types of on-page SEO, how to check on-page SEO issues, and proven on-page SEO strategies — plus our on-page SEO services.',
+    'Get expert on page SEO services to optimize content, keywords, headings, URLs, and internal links, helping your website rank higher and drive traffic.',
 };
 
 export default function OnPageSEOPage() {
@@ -49,7 +49,7 @@ export default function OnPageSEOPage() {
               </h2>
               <p className="text-[#4B4B4B] text-[17px] leading-relaxed">
                 Before optimizing anything, you need to know where you stand.<br />
-                Here's how to check on-page SEO issues without an expensive tool subscription.
+                Here's how to check on page SEO issues without an expensive tool subscription.
               </p>
             </div>
             <table>
@@ -102,7 +102,7 @@ export default function OnPageSEOPage() {
               </tbody>
             </table>
             <p style={{ marginTop: '18px' }}>
-              If you'd rather skip the manual audit, this is exactly the kind of work covered under our on-page SEO services — a trained eye spots issues in minutes that might take you hours to find.
+              If you'd rather skip the manual audit, this is exactly the kind of work covered under our on page SEO services — a trained eye spots issues in minutes that might take you hours to find.
             </p>
           </div>
         </section>

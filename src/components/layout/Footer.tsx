@@ -33,9 +33,9 @@ export default function Footer() {
               <Image 
                 src="/rankforce-logo.png" 
                 alt="Rank Force Logo" 
-                width={48} 
-                height={48} 
-                className="h-10 w-auto object-contain"
+                width={64} 
+                height={64} 
+                className="h-16 w-auto object-contain"
               />
               <div className="flex items-center text-2xl font-bold tracking-tight mt-1">
                 <span className="text-white">Rank</span>

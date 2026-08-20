@@ -30,13 +30,13 @@ export function OnPageSEOImplement() {
         {/* Mobile Layout: Stacked, Left content first */}
         <div className="block lg:hidden mb-12">
           <span className="inline-block bg-[#FFF1E6] text-[#FF6A00] px-3 py-1 rounded-full text-[13px] font-bold uppercase tracking-wide mb-4">
-            Types of On-Page SEO
+            Types of On Page SEO
           </span>
           <h2 className="text-[28px] font-bold text-[#1A1A1A] leading-tight mb-4">
-            Things We Implement in On-Page SEO
+            Things We Implement in On Page SEO
           </h2>
           <p className="text-[#6B6B6B] text-[16px] leading-[1.7]">
-            On-page SEO isn't one task — it's a collection of elements working together. Here are the types of on-page SEO covered on every project.
+            On-page SEO isn't one task — it's a collection of elements working together. Here are the types of on page SEO covered on every project.
           </p>
         </div>
 
@@ -46,13 +46,13 @@ export function OnPageSEOImplement() {
           {/* LEFT COLUMN - STICKY (Desktop only) */}
           <div className="hidden lg:block sticky top-32">
             <span className="inline-block bg-[#FFF1E6] text-[#FF6A00] px-3 py-1 rounded-full text-[13px] font-bold uppercase tracking-wide mb-6">
-              Types of On-Page SEO
+              Types of On Page SEO
             </span>
             <h2 className="text-[36px] font-bold text-[#1A1A1A] leading-tight mb-6 pr-8">
-              Things We Implement in On-Page SEO
+              Things We Implement in On Page SEO
             </h2>
             <p className="text-[#6B6B6B] text-[17px] leading-[1.8] pr-8">
-              On-page SEO isn't one task — it's a collection of elements working together. Here are the types of on-page SEO covered on every project.
+              On page SEO isn't one task — it's a collection of elements working together. Here are the types of on page SEO covered on every project.
             </p>
           </div>
 

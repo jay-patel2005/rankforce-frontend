@@ -48,7 +48,7 @@ export function OnPageSEODifference() {
         {/* HEADER */}
         <div className="text-center mb-16 flex flex-col items-center">
           <h2 className="text-[36px] md:text-[42px] font-[800] text-[#1A1A1A] leading-[1.15] max-w-[650px] mx-auto tracking-tight">
-            Why Choose Our<br />On-Page SEO Services
+            Why Choose Our<br />On Page SEO Services
           </h2>
           
           {/* Custom Heading Divider */}
