@@ -1,10 +1,10 @@
 import type { Metadata } from 'next';
 import Navbar from '@/components/layout/Navbar';
 import Footer from '@/components/layout/Footer';
-import styles from './on-page-seo.module.css';
+import styles from './ecommerce-seo.module.css';
 import { GlobalCTA } from '@/components/sections/GlobalCTA';
 import { FeaturedBlogs } from '@/components/sections/FeaturedBlogs';
-import { onPageSeoData } from '@/data/services/onPageSeoData';
+import { ecommerceSeoData } from '@/data/services/ecommerceSeoData';
 
 import { ServiceHero } from '@/components/sections/services/shared/ServiceHero';
 import { ServiceImportance } from '@/components/sections/services/shared/ServiceImportance';
@@ -17,45 +17,47 @@ import { ServiceDifference } from '@/components/sections/services/shared/Service
 import { ServiceTestimonials } from '@/components/sections/services/shared/ServiceTestimonials';
 
 export const metadata: Metadata = {
-  title: 'On Page SEO Services | Improve Rankings & Organic Traffic',
+  title: 'E-commerce SEO Services | Increase Online Store Sales & Organic Traffic',
   description:
-    'Get expert on page SEO services to optimize content, keywords, headings, URLs, and internal links, helping your website rank higher and drive traffic.',
+    'Expert e-commerce SEO services designed to optimize your product pages, categories, and technical foundation to drive high-intent buyers to your store.',
 };
 
-export default function OnPageSEOPage() {
+export default function EcommerceSEOPage() {
   return (
     <>
       <Navbar />
       <main className={styles.seoContainer}>
         {/* HERO */}
-        <ServiceHero data={onPageSeoData.hero} />
+        <ServiceHero data={ecommerceSeoData.hero} />
 
-        {/* WHAT IS ON PAGE SEO / IMPORTANCE */}
-        <ServiceImportance data={onPageSeoData.importance} />
+
+
+        {/* IMPORTANCE */}
+        <ServiceImportance data={ecommerceSeoData.importance} />
 
         {/* STAT BAND */}
-        <ServiceStatBand data={onPageSeoData.statBand} />
+        <ServiceStatBand data={ecommerceSeoData.statBand} />
 
         {/* TOOLS */}
-        <ServiceTools data={onPageSeoData.tools} />
+        <ServiceTools data={ecommerceSeoData.tools} />
 
-        {/* TYPES / IMPLEMENT */}
-        <ServiceImplement data={onPageSeoData.implement} />
+        {/* IMPLEMENT */}
+        <ServiceImplement data={ecommerceSeoData.implement} />
 
-        {/* HOW TO CHECK */}
-        <ServiceChecklist data={onPageSeoData.checklist} />
+        {/* CHECKLIST */}
+        <ServiceChecklist data={ecommerceSeoData.checklist} />
 
         {/* FAQ */}
-        <ServiceFaq data={onPageSeoData.faq} />
+        <ServiceFaq data={ecommerceSeoData.faq} />
 
         {/* WHY CHOOSE */}
-        <ServiceDifference data={onPageSeoData.difference} />
+        <ServiceDifference data={ecommerceSeoData.difference} />
 
         {/* BLOGS */}
         <FeaturedBlogs />
 
         {/* TESTIMONIALS */}
-        <ServiceTestimonials data={onPageSeoData.testimonials} />
+        <ServiceTestimonials data={ecommerceSeoData.testimonials} />
 
         {/* GLOBAL CTA */}
         <GlobalCTA />

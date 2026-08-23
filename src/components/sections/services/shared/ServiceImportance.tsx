@@ -1,10 +1,11 @@
 import React from 'react';
+import { ServiceImportanceData } from '@/types/service-page';
 
-export function OnPageSEOImportance() {
+export function ServiceImportance({ data }: { data: ServiceImportanceData }) {
   return (
     <section className="relative bg-white pt-8 pb-4 lg:pt-14 lg:pb-8 overflow-hidden">
       
-      {/* Subtle Background Elements (matching the reference image's faint orange icons) */}
+      {/* Subtle Background Elements */}
       <div className="absolute inset-0 pointer-events-none z-0">
         <div className="absolute top-[10%] left-[5%] opacity-[0.03] scale-150">
           <svg width="100" height="100" viewBox="0 0 24 24" fill="none" stroke="#FF6A00" strokeWidth="1">
@@ -50,7 +51,7 @@ export function OnPageSEOImportance() {
         
         <div className="text-center mb-6 lg:mb-8">
           <h2 className="text-[32px] lg:text-[42px] font-extrabold text-[#1A1A1A] leading-tight">
-            <span className="text-[#FF6A00]">On-Page SEO</span> Services in Ahmedabad
+            {data.titleHtml}
           </h2>
           <div className="flex items-center justify-center mt-6 gap-2">
             <div className="w-16 h-[2px] bg-[#FF6A00]"></div>
@@ -59,27 +60,35 @@ export function OnPageSEOImportance() {
           </div>
         </div>
 
-        <div className="grid grid-cols-1 lg:grid-cols-2 gap-16 lg:gap-24 items-center">
+        <div className={`grid grid-cols-1 gap-12 items-center ${
+          data.layoutVariant === 'wide-image' 
+            ? 'lg:grid-cols-[0.85fr_1.15fr] lg:gap-16' 
+            : 'lg:grid-cols-2 lg:gap-24'
+        }`}>
           
           {/* Left Content */}
           <div className="max-w-[540px]">
             <h3 className="text-[22px] lg:text-[24px] font-bold text-[#1A1A1A] mb-8 leading-snug">
-              What Makes On Page SEO Important for Your Website?
+              {data.heading}
             </h3>
-            <p className="text-[17px] text-[#4B4B4B] leading-[1.8] mb-6 text-justify">
-              On page refers to everything you can optimize directly on your website's pages to help them rank higher and attract the right visitors — your title tag, headings, keyword usage, internal links, images, and overall page experience.
-            </p>
-            <p className="text-[17px] text-[#4B4B4B] leading-[1.8] mb-6 text-justify">
-              It's different from off-page SEO (backlinks, mentions) and technical SEO (speed, crawlability). On-page SEO is the part fully within your control, and it's the foundation everything else is built on. Get it right, and search engines can clearly understand and reward your content.
-            </p>
-            <p className="text-[17px] text-[#4B4B4B] leading-[1.8] text-justify">
-              This is exactly why on page deserves priority — without it, even the best off-page campaigns struggle to hold rankings long-term.
-            </p>
+            {data.paragraphs.map((p, index) => (
+              <p key={index} className="text-[17px] text-[#4B4B4B] leading-[1.8] mb-6 text-justify">
+                {p}
+              </p>
+            ))}
           </div>
 
           {/* Right Image */}
-          <div className="w-full flex justify-center">
-            <img src="/images/on-page-seo-diagram.webp" alt="On Page SEO Diagram" className="w-full max-w-[500px] h-auto" />
+          <div className={`w-full flex justify-center ${data.layoutVariant === 'wide-image' ? 'lg:justify-end' : ''}`}>
+            <img 
+              src={data.imageSrc} 
+              alt={data.imageAlt} 
+              className={`w-full h-auto ${
+                data.layoutVariant === 'wide-image'
+                  ? 'max-w-[550px] lg:max-w-[750px] lg:scale-[1.08] lg:origin-center'
+                  : 'max-w-[500px]'
+              }`}
+            />
           </div>
 
         </div>

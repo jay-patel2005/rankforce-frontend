@@ -3,31 +3,9 @@
 import React, { useState } from 'react';
 import { ChevronDown } from 'lucide-react';
 import { motion, AnimatePresence } from 'framer-motion';
+import { ServiceFaqData } from '@/types/service-page';
 
-const faqs = [
-  {
-    question: "What is the difference between on-page and off-page SEO?",
-    answer: "On-page SEO covers everything you control directly on your website — content, tags, structure. Off-page SEO covers external signals like backlinks and mentions.",
-  },
-  {
-    question: "How long does on-page SEO take to show results?",
-    answer: "Most sites see measurable movement within 4–8 weeks, though competitive keywords can take longer.",
-  },
-  {
-    question: "Can I do on-page SEO myself, or do I need on-page SEO services?",
-    answer: "You can start with the checklist above yourself. But if you want faster, more consistent results, professional on-page SEO services are usually worth it.",
-  },
-  {
-    question: "What on page SEO strategies should I prioritize first?",
-    answer: "Start with title tags, header structure, and matching content to search intent — these on-page SEO strategies typically produce the fastest visible movement.",
-  },
-  {
-    question: "How often should I check on-page SEO?",
-    answer: "Ideally once a quarter, or whenever you publish new content or notice a ranking drop.",
-  },
-];
-
-export function OnPageSEOFaq() {
+export function ServiceFaq({ data }: { data: ServiceFaqData }) {
   const [openIndex, setOpenIndex] = useState<number | null>(0);
 
   const toggleFaq = (index: number) => {
@@ -40,22 +18,22 @@ export function OnPageSEOFaq() {
         
         {/* HEADER */}
         <div className="text-left mb-10 max-w-[900px] mx-auto">
+          <span className="inline-block bg-[#FFF1E6] text-[#FF6A00] text-xs font-bold px-3 py-1 rounded-full uppercase tracking-wider mb-4 border border-[#FFE8D6]">
+            {data.badge}
+          </span>
           <h2 className="text-[32px] md:text-[38px] font-bold text-[#1A1A1A] leading-tight mb-4">
-            Frequently Asked On-Page SEO Questions
+            {data.titleHtml}
           </h2>
-          <p className="text-[#6B6B6B] text-[17px] max-w-2xl">
-            Everything you need to know about on-page SEO, answered simply.
-          </p>
         </div>
 
         {/* ACCORDION */}
         <div className="flex flex-col gap-[16px] max-w-[900px] mx-auto">
-          {faqs.map((faq, index) => {
+          {data.items.map((faq, index) => {
             const isOpen = openIndex === index;
             
             return (
               <div 
-                key={index}
+                key={faq.id}
                 className="group bg-[rgba(255,255,255,0.70)] backdrop-blur-[12px] border border-[rgba(255,106,0,0.10)] rounded-[16px] shadow-[0_4px_20px_rgba(31,41,55,0.03)] transition-all duration-300 hover:border-[rgba(255,106,0,0.25)] hover:bg-[rgba(255,255,255,0.95)] hover:-translate-y-[2px]"
               >
                 <button

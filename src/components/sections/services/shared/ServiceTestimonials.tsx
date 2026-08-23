@@ -2,35 +2,11 @@
 
 import React, { useCallback, useEffect, useState } from 'react';
 import useEmblaCarousel from 'embla-carousel-react';
-import { ChevronLeft, ChevronRight, Star, ArrowRight, Quote } from 'lucide-react';
+import { ChevronLeft, ChevronRight, Quote, ArrowRight } from 'lucide-react';
 import Link from 'next/link';
-import Image from 'next/image';
+import { ServiceTestimonialData } from '@/types/service-page';
 
-const testimonials = [
-  {
-    id: 1,
-    name: "Placeholder Client 1",
-    role: "CEO, Tech Startup",
-    text: "Our on-page SEO was a mess before this — now every page actually targets the right intent.",
-    image: "https://ui-avatars.com/api/?name=Client+1&background=FF6A00&color=fff",
-  },
-  {
-    id: 2,
-    name: "Placeholder Client 2",
-    role: "Founder, Local Business",
-    text: "The on-page SEO audit alone uncovered issues we didn't know existed for years.",
-    image: "https://ui-avatars.com/api/?name=Client+2&background=FF6A00&color=fff",
-  },
-  {
-    id: 3,
-    name: "Placeholder Client 3",
-    role: "Marketing Director",
-    text: "Clear on page SEO strategies, honest reporting, and steady organic growth every month.",
-    image: "https://ui-avatars.com/api/?name=Client+3&background=FF6A00&color=fff",
-  },
-];
-
-export function OnPageSEOTestimonials() {
+export function ServiceTestimonials({ data }: { data: ServiceTestimonialData[] }) {
   const [emblaRef, emblaApi] = useEmblaCarousel({
     loop: true,
     align: "center",
@@ -73,10 +49,10 @@ export function OnPageSEOTestimonials() {
         {/* Header */}
         <div className="text-center mb-4 flex flex-col items-center">
           <h2 className="text-[32px] md:text-[40px] font-bold text-[#111111] leading-[1.2] mb-4">
-            Loved by On-Page SEO Clients
+            Loved by Our Clients
           </h2>
           <p className="text-[16px] md:text-[18px] text-[#667085] max-w-[600px]">
-            Real results. Real stories. See what our clients say about our on-page SEO services.
+            Real results. Real stories. See what our clients say about our services.
           </p>
         </div>
 
@@ -86,7 +62,7 @@ export function OnPageSEOTestimonials() {
           {/* Viewport */}
           <div className="overflow-hidden px-4 py-6" ref={emblaRef}>
             <div className="flex gap-6">
-              {testimonials.map((t) => (
+              {data.map((t) => (
                 <div 
                   key={t.id} 
                   className="min-w-0 flex-[0_0_100%] md:flex-[0_0_50%] lg:flex-[0_0_33.333%]"
