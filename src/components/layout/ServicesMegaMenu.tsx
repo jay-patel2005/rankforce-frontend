@@ -47,7 +47,7 @@ export const servicesMenu: ServiceCategory[] = [
       { label: "Technical SEO", href: "/services/technical-seo", icon: Settings },
       { label: "On Page SEO", href: "/services/on-page-seo", icon: FileText },
       { label: "Global / International SEO", href: "/services/global-seo", icon: Globe },
-      { label: "AI SEO / AEO", href: "/services/ai-seo", icon: Sparkles },
+      { label: "AEO & GEO", href: "/services/aeo-geo", icon: Sparkles },
       { label: "Keyword Research", href: "/services/keyword-research", icon: Search },
       { label: "SEO Audit", href: "/services/seo-audit", icon: BarChart2 },
     ],

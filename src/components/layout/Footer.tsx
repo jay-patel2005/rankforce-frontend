@@ -97,7 +97,7 @@ export default function Footer() {
                 <Link href="/services/content-seo" className="transition-colors hover:text-primary">Content SEO</Link>
               </li>
               <li>
-                <Link href="/services/ai-seo" className="transition-colors hover:text-primary">AI SEO</Link>
+                <Link href="/services/aeo-geo" className="transition-colors hover:text-primary">AEO & GEO</Link>
               </li>
             </ul>
           </div>

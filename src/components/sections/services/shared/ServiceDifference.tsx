@@ -28,7 +28,7 @@ export function ServiceDifference({ data }: { data: ServiceDifferenceData }) {
             {data.titleHtml}
           </h2>
           {data.subtitle && (
-            <p className="text-[17px] text-[#6B6B6B] max-w-[600px] mx-auto">
+            <p className="text-center text-[18px] lg:text-[20px] text-[#4B4B4B] max-w-[800px] mx-auto leading-[1.6]">
               {data.subtitle}
             </p>
           )}
