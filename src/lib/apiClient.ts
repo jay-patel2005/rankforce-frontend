@@ -40,3 +40,18 @@ export default apiClient;
 
 export const healthCheck = () =>
   apiClient.get<{ status: string; timestamp: string; uptime: number }>('/health');
+
+export interface ContactFormData {
+  fullName: string;
+  workEmail: string;
+  phone?: string;
+  service?: string;
+  serviceCategory?: string;
+  websiteUrl?: string;
+  message: string;
+}
+
+export const submitContactForm = async (data: ContactFormData) => {
+  const response = await apiClient.post<{ success: boolean; message: string; leadId?: string }>('/leads', data);
+  return response.data;
+};
