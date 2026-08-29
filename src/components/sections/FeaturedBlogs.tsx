@@ -56,7 +56,7 @@ export function FeaturedBlogs() {
             RESOURCES
           </span>
           <h2 className="text-[32px] md:text-[40px] font-bold text-[#111111] leading-[1.2] mb-5">
-            Latest On Page SEO Strategies and Tips You Need to Know
+            Latest SEO Strategies and Tips You Need to Know
           </h2>
           <p className="text-[16px] md:text-[18px] text-[#667085] leading-relaxed">
             Explore our latest blogs and stay updated with actionable on page SEO strategies, insights, and best practices.
