@@ -18,6 +18,17 @@ const nextConfig: NextConfig = {
   // Trailing slash consistency
   trailingSlash: false,
 
+  // Redirects for old URLs
+  async redirects() {
+    return [
+      {
+        source: '/services/performance-marketing',
+        destination: '/services/meta-ads',
+        permanent: true,
+      },
+    ];
+  },
+
   // Compiler optimizations
   compiler: {
     removeConsole: process.env.NODE_ENV === "production",

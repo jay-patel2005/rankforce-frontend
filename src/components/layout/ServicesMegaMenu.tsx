@@ -56,7 +56,7 @@ export const servicesMenu: ServiceCategory[] = [
     title: "DIGITAL MARKETING",
     items: [
       { label: "Social Media Marketing", href: "/services/social-media-marketing", icon: Share2 },
-      { label: "Performance Marketing / PPC", href: "/services/performance-marketing", icon: TrendingUp },
+      { label: "Meta Ads", href: "/services/meta-ads", icon: TrendingUp },
       { label: "Content Marketing", href: "/services/content-marketing", icon: PenTool },
       { label: "Google Ads", href: "/services/google-ads", icon: Target },
       { label: "Social Media Ads", href: "/services/social-ads", icon: Megaphone },

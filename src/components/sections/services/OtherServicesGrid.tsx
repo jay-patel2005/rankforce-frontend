@@ -20,8 +20,8 @@ const otherServices = [
   },
   {
     icon: TrendingUp,
-    title: "Performance Marketing / PPC",
-    slug: "performance-marketing",
+    title: "Meta Ads",
+    slug: "meta-ads",
     description: "Maximize your ROAS with highly targeted campaigns on Google Ads and Meta Ads.",
   },
   {
