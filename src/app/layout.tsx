@@ -27,12 +27,12 @@ export const metadata: Metadata = {
     "content marketing",
     "Rank Force",
   ],
-  authors: [{ name: "JD", url: "https://rankwithjd.com" }],
+  authors: [{ name: "JD", url: "https://rankforce.in" }],
   creator: "JD",
   openGraph: {
     type: "website",
     locale: "en_US",
-    url: "https://rankwithjd.com",
+    url: "https://rankforce.in",
     siteName: "Rank Force",
     title: "Rank Force — Freelance SEO Expert | Grow Your Leads & Sales",
     description:

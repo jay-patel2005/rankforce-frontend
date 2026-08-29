@@ -3,6 +3,8 @@ import type { Metadata } from 'next';
 import { Phone, Mail, MapPin, Clock, ArrowRight, ShieldCheck, Zap, Handshake, MessageSquare } from 'lucide-react';
 import ContactForm from '@/components/sections/contact/ContactForm';
 import Link from 'next/link';
+import Navbar from '@/components/layout/Navbar';
+import Footer from '@/components/layout/Footer';
 
 export const metadata: Metadata = {
   title: 'Contact | Rank Force — Get a Free SEO Audit',
@@ -12,8 +14,10 @@ export const metadata: Metadata = {
 
 export default function ContactPage() {
   return (
-    <main className="min-h-screen bg-[#FDF8F5] relative overflow-hidden pb-20">
-      {/* Background Decorative Elements */}
+    <>
+      <Navbar />
+      <main className="min-h-screen bg-[#FDF8F5] relative overflow-hidden pb-20">
+        {/* Background Decorative Elements */}
       <div className="absolute top-0 left-0 w-full h-[500px] overflow-hidden pointer-events-none z-0">
         <div className="absolute top-[-10%] right-[-5%] w-[600px] h-[600px] rounded-full border-[40px] border-[#FFF0E6] opacity-60"></div>
         <div className="absolute top-[20%] right-[10%] w-[300px] h-[300px] rounded-full border-[20px] border-[#FFE4D6] opacity-40"></div>
@@ -180,5 +184,7 @@ export default function ContactPage() {
         </div>
       </div>
     </main>
+      <Footer />
+    </>
   );
 }
