@@ -16,6 +16,7 @@ export interface ServiceImportanceData {
   imageSrc: string;
   imageAlt: string;
   layoutVariant?: 'default' | 'wide-image';
+  imageClassName?: string;
 }
 
 export interface ServiceStatBandData {

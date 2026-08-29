@@ -36,7 +36,7 @@ export function ServiceHero({ data }: { data: ServiceHeroData }) {
           </div>
           
           {/* RIGHT DASHBOARD */}
-          <div className="relative w-full max-w-[600px] mx-auto lg:ml-auto lg:translate-x-10 h-[380px] lg:h-[500px] hidden lg:flex items-center justify-center">
+          <div className="relative w-full max-w-[600px] mx-auto lg:ml-auto lg:translate-x-10 min-h-[380px] lg:min-h-[500px] hidden lg:flex items-center justify-center">
             {/* Soft Glow Behind Dashboard */}
             <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[120%] h-[120%] bg-[rgba(255,106,0,0.04)] rounded-full blur-3xl -z-10 pointer-events-none"></div>
             

@@ -2,16 +2,16 @@ import React from 'react';
 import { ServicePageData } from '@/types/service-page';
 import { SocialMediaMarketingHeroDashboard } from '@/components/sections/services/social-media-marketing/SocialMediaMarketingHeroDashboard';
 import { 
-  Target, 
+  CalendarDays, 
+  Megaphone, 
+  Users, 
+  UserPlus, 
+  BarChart2, 
   PenTool, 
-  Share2, 
-  Briefcase, 
-  RefreshCcw, 
-  LayoutTemplate, 
-  SplitSquareHorizontal, 
-  BarChart2,
-  Globe,
+  Layout, 
   TrendingUp,
+  Target,
+  DollarSign,
   Zap,
   UserCheck
 } from 'lucide-react';
@@ -22,194 +22,189 @@ export const socialMediaMarketingData: ServicePageData = {
   hero: {
     badge: 'SOCIAL MEDIA MARKETING',
     titleHtml: (
-      <><span className="text-[#FF6A00]">Social Media Ads</span> Packages</>
+      <><span className="text-[#FF6A00]">Social Media Marketing</span> Services</>
     ),
     description:
-      "Organic posting alone rarely moves the needle anymore. We build, launch, and manage ad campaigns across the platforms your customers actually spend time on, so growth stops depending on the algorithm's mood.",
-    buttonText: 'Get a Free Ads Audit →',
+      "A strong social media marketing plan turns scrolling into actual sales, not just likes and comments that go nowhere. We build the content calendar, run the ads, and report on what's actually moving your business forward.",
+    buttonText: 'Get a Free Social Media Audit →',
     buttonLink: '/contact',
     rightComponent: <SocialMediaMarketingHeroDashboard />,
   },
 
   importance: {
     titleHtml: (
-      <><span className="text-[#FF6A00]">Social Media Ads</span> Services</>
+      <><span className="text-[#FF6A00]">Digital Marketing Experts</span> in India</>
     ),
-    heading: 'Why Social Media Ads Work for Growing Businesses',
+    heading: 'What Are Social Media Marketing and Why It Matters to Your Brand',
     paragraphs: [
-      "Organic posts are great for staying visible with people who already follow you, but they rarely reach anyone new. One of the clearest benefits of social media ads is that they put your business in front of people who've never heard of you yet, right on the platforms where they're already scrolling.",
-      "The importance of social media ads shows up fastest for businesses that are new, local, or launching something. Waiting for organic reach to build on its own can take months you might not have, and the algorithm doesn't really care about your timeline.",
-      "That's really what social media ads packages are for. Bundling strategy, creative, targeting, and reporting into one place so you're not juggling five different tools and guessing at the rest."
+      "So, what are social media marketing efforts actually supposed to do for a business? It's more than posting daily. It's using platforms like Instagram, Facebook, and LinkedIn to build an audience, drive traffic, and turn followers into paying customers.",
+      "A lot of brands treat it like a checkbox: post something, anything, and move on. That's not a strategy, that's just noise, and noise doesn't convert.",
+      "Real social media marketing works because it's consistent, targeted, and tied to an actual goal, not whatever trend happens to be popular that week."
     ],
-    imageSrc: '/images/services/socialmedia.webp', // Can use existing placeholder image or custom svg if needed
-    imageAlt: 'Social Media Ads visualization',
+    imageSrc: '/images/services/socialmediamarketing.webp', // Can use existing placeholder image
+    imageAlt: 'Social Ads visualization',
     layoutVariant: 'wide-image',
   },
 
   statBand: {
     badge: 'Why we focus on it',
-    title: 'Importance of Social Media Ads in 2026',
+    title: 'Social Media Marketing Benefits That Actually Move the Needle',
     paragraphs: [
-      "Feeds keep getting more crowded, and organic reach keeps shrinking whether we like it or not. Paid placement is the fastest way left to guarantee your business actually gets seen by the people it's meant for."
+      "Ads get more expensive every quarter, and organic reach keeps shrinking on every platform. What still works is a presence people trust enough to buy from, and that's built one post, one comment, one DM at a time."
     ],
     statCards: [
-      { value: '3.2x', label: 'Avg. reach vs organic-only posts', highlightColor: '#FFF1E6' },
-      { value: '+27%', label: 'Click-through rate improvement', highlightColor: '#FFF1E6' },
-      { value: '4.1x', label: 'Average return on ad spend', highlightColor: '#FFF1E6' },
-      { value: '94%', label: 'Client retention rate', highlightColor: '#FFF1E6' },
+      { value: '+65%', label: 'Avg. engagement growth', highlightColor: '#FFF1E6' },
+      { value: '3.4x', label: 'Follower growth in 90 days', highlightColor: '#FFF1E6' },
+      { value: '28%', label: 'Avg. lead increase', highlightColor: '#FFF1E6' },
+      { value: '95%', label: 'Client retention rate', highlightColor: '#FFF1E6' },
     ],
-    quote: "An ad campaign isn't a one-off boost — it's an ongoing system that keeps bringing the right people to your business."
+    quote: "The real social media marketing benefits show up months after the campaign starts, not during the first week. That's the part most business owners underestimate."
   },
 
   tools: {
-    title: 'PLATFORMS & TOOLS WE USE',
-    subtitle: 'Expertise across the major ad networks and analytics platforms.',
+    title: 'TOOLS WE USE',
+    subtitle: 'Expertise across the major social networks and analytics platforms.',
     tools: [
-      { name: 'Meta Ads Manager', logo: <span className="font-bold text-[14px]">Meta</span> },
-      { name: 'Google Ads', logo: <span className="font-bold text-[14px]">Google</span> },
-      { name: 'LinkedIn Campaign Manager', logo: <span className="font-bold text-[14px]">LinkedIn</span> },
-      { name: 'TikTok Ads', logo: <span className="font-bold text-[14px]">TikTok</span> },
+      { name: 'Meta Business Suite', logo: <span className="font-bold text-[14px]">Meta</span> },
+      { name: 'Hootsuite', logo: <span className="font-bold text-[14px]">Hootsuite</span> },
       { name: 'Canva', logo: <span className="font-bold text-[14px]">Canva</span> },
-      { name: 'GA4', logo: <span className="font-bold text-[14px]">GA4</span> },
+      { name: 'Sprout Social', logo: <span className="font-bold text-[14px]">Sprout</span> },
+      { name: 'Google Analytics', logo: <span className="font-bold text-[14px]">Analytics</span> },
+      { name: 'Later', logo: <span className="font-bold text-[14px]">Later</span> },
     ],
   },
 
   implement: {
     badge: 'What we do',
-    title: 'What We Implement in Our Social Media Ads Strategy',
+    title: 'What Our Social Media Marketing Services Include',
     description:
-      "Running ads well isn't just boosting a post and hoping for the best. Here's what our social media ads services actually include, campaign by campaign.",
+      "Running social media well takes more moving parts than most people expect: strategy, content, ads, and reporting, all working together instead of sitting in separate silos. Here's what that looks like for your brand.",
     items: [
       {
-        id: 'audience-research',
-        title: 'Audience Research & Targeting',
-        description: 'Finding the people actually likely to buy, based on behavior and interests, not a generic age-and-location guess.',
-        icon: <Target size={20} strokeWidth={2.5} />,
+        id: 'content-strategy',
+        title: 'Content Strategy & Calendar',
+        description: 'A posting plan built around your actual goals, not just filling a calendar with generic content.',
+        icon: <CalendarDays size={20} strokeWidth={2.5} />,
       },
       {
-        id: 'ad-creative',
-        title: 'Ad Creative & Copywriting',
-        description: 'Scroll-stopping visuals and copy written for the platform, because what works on Instagram usually flops on LinkedIn.',
+        id: 'paid-social',
+        title: 'Paid Social Advertising',
+        description: 'Targeted campaigns on Meta, Instagram, and LinkedIn that reach people actually likely to buy from you.',
+        icon: <Megaphone size={20} strokeWidth={2.5} />,
+      },
+      {
+        id: 'community-management',
+        title: 'Community Management',
+        description: "Comments, DMs, and mentions handled daily, not answered three days late once the moment's already passed.",
+        icon: <Users size={20} strokeWidth={2.5} />,
+      },
+      {
+        id: 'influencer',
+        title: 'Influencer & Creator Partnerships',
+        description: 'Matching your brand with creators whose audience actually overlaps with yours, not just anyone with a large following.',
+        icon: <UserPlus size={20} strokeWidth={2.5} />,
+      },
+      {
+        id: 'analytics',
+        title: 'Analytics & Performance Reporting',
+        description: 'Clear monthly reports showing what worked, what didn\'t, and what we\'re adjusting next.',
+        icon: <BarChart2 size={20} strokeWidth={2.5} />,
+      },
+      {
+        id: 'brand-voice',
+        title: 'Brand Voice & Creative Direction',
+        description: "A consistent tone and visual style across every platform, so your brand feels like one thing, not five.",
         icon: <PenTool size={20} strokeWidth={2.5} />,
       },
       {
-        id: 'fb-ig-ads',
-        title: 'Facebook & Instagram Ads',
-        description: "Campaign structures built around your actual goal, whether that's leads, sales, or simply getting the brand in front of more people.",
-        icon: <Share2 size={20} strokeWidth={2.5} />,
+        id: 'platform-strategy',
+        title: 'Platform-Specific Strategy',
+        description: "What works on Instagram doesn't automatically work on LinkedIn, so each platform gets its own approach.",
+        icon: <Layout size={20} strokeWidth={2.5} />,
       },
       {
-        id: 'linkedin-ads',
-        title: 'LinkedIn & B2B Ads',
-        description: 'For businesses selling to other businesses, where the targeting and the tone both need to be different from consumer campaigns.',
-        icon: <Briefcase size={20} strokeWidth={2.5} />,
-      },
-      {
-        id: 'retargeting',
-        title: 'Retargeting Campaigns',
-        description: "Bringing back people who visited but didn't buy is one of the biggest benefits of social media ads over organic-only posting, and it's usually the cheapest conversion you'll get.",
-        icon: <RefreshCcw size={20} strokeWidth={2.5} />,
-      },
-      {
-        id: 'landing-page',
-        title: 'Landing Page Alignment',
-        description: 'The page someone lands on after clicking your ad matters as much as the ad itself. We check the two actually match up.',
-        icon: <LayoutTemplate size={20} strokeWidth={2.5} />,
-      },
-      {
-        id: 'ab-testing',
-        title: 'A/B Testing',
-        description: 'Running variations side by side instead of guessing which headline or image performs better.',
-        icon: <SplitSquareHorizontal size={20} strokeWidth={2.5} />,
-      },
-      {
-        id: 'reporting',
-        title: 'Reporting & Optimization',
-        description: "Clear numbers on what's working and what's not, with campaigns adjusted weekly rather than left to run on autopilot.",
-        icon: <BarChart2 size={20} strokeWidth={2.5} />,
+        id: 'growth-campaigns',
+        title: 'Engagement & Growth Campaigns',
+        description: "Contests, collaborations, and campaigns designed to grow your following with people who'll actually engage.",
+        icon: <TrendingUp size={20} strokeWidth={2.5} />,
       },
     ],
   },
 
   checklist: {
-    title: 'Your Quick Ad Campaign Checklist',
+    title: 'Your Quick Social Media Marketing Checklist',
     descriptionHtml: (
-      <>Curious how your current setup stacks up before spending anything? Run through this list yourself first. Most of it takes fifteen minutes.</>
+      <>Want to know where your social presence actually stands before spending on ads? Run through this list yourself first, most of it takes fifteen minutes.</>
     ),
     columns: ['Element', 'What to Check', 'Quick Tool'],
     rows: [
-      { element: 'Ad Account Structure', check: 'Campaigns organized by goal, not thrown together', tool: 'Meta Ads Manager' },
-      { element: 'Pixel & Tracking', check: 'Installed and firing correctly on key pages', tool: 'Meta Pixel Helper' },
-      { element: 'Ad Creative', check: 'Fresh visuals, not the same image reused for months', tool: 'Manual review' },
-      { element: 'Audience Overlap', check: "Campaigns aren't competing against each other", tool: 'Meta Ads Manager' },
-      { element: 'Landing Page Match', check: 'Ad promise matches what the page actually offers', tool: 'Manual audit' },
-      { element: 'Budget Allocation', check: "Spend weighted toward what's actually converting", tool: 'GA4' },
-      { element: 'Ad Frequency', check: "Not so high it's annoying the same people repeatedly", tool: 'Meta Ads Manager' },
-      { element: 'Reporting Cadence', check: 'Reviewed weekly, not once a quarter', tool: 'GA4' },
+      { element: 'Posting Consistency', check: '3-4 posts per week per platform', tool: 'Native scheduler' },
+      { element: 'Bio & Profile', check: 'Clear, on-brand, with a working link', tool: 'Manual check' },
+      { element: 'Engagement Rate', check: 'Comments and likes relative to followers', tool: 'Native insights' },
+      { element: 'Content Mix', check: 'A mix of reels, static posts, and stories', tool: 'Manual audit' },
+      { element: 'Hashtag Usage', check: 'Relevant, not generic or overused', tool: 'Native insights' },
+      { element: 'Ad Account Setup', check: 'Pixel installed, ads tracking correctly', tool: 'Meta Business Suite' },
+      { element: 'Response Time', check: 'DMs and comments answered within a day', tool: 'Manual check' },
+      { element: 'Analytics Tracking', check: 'UTM links used on all bio/post links', tool: 'Google Analytics' },
     ],
-    footerText: "Not in the mood for a manual audit? Fair enough. That's exactly what social media ads are for. A few small fixes can be quietly wasting your budget right now.",
+    footerText: "Not in the mood to dig through analytics yourself? Fair enough, that's exactly why we exist. A few missed basics can be quietly costing you followers and sales.",
   },
 
   faq: {
     badge: 'FAQ',
-    titleHtml: <>Frequently Asked <span className="text-[#FF6A00]">Ad Campaign Questions</span></>,
+    titleHtml: <>Frequently Asked <span className="text-[#FF6A00]">Questions</span></>,
     items: [
       {
         id: 'faq-1',
-        question: 'What are social media ads?',
-        answer: "They're paid campaigns run on platforms like Facebook, Instagram, LinkedIn, and YouTube that put your business in front of a specific, chosen audience instead of relying on the algorithm to show your posts to your existing followers."
+        question: "What's included in social media marketing services?",
+        answer: "It's the full package: strategy, content creation, posting, paid ads, and reporting, all handled so your brand shows up consistently instead of in random bursts."
       },
       {
         id: 'faq-2',
-        question: "What's included in your social media ads services?",
-        answer: "Strategy, audience research, ad creative, campaign setup, ongoing optimization, and reporting. Everything from the first draft of the ad to the weekly numbers review."
+        question: "What are social media marketing goals I should actually track?",
+        answer: "Engagement rate, follower growth, click-through to your site, and actual conversions matter far more than vanity metrics like total likes."
       },
       {
         id: 'faq-3',
-        question: "What are the real benefits of social media ads for a small business?",
-        answer: "Mainly speed and control. You reach new people faster than organic growth allows, and you can target exactly who sees the ad instead of hoping the right person scrolls past your page."
+        question: "Should I hire a social media marketing agency or handle it in-house?",
+        answer: "Depends on your bandwidth. A social media marketing agency makes sense once posting consistently, running ads, and tracking results starts eating more hours than your team actually has."
       },
       {
         id: 'faq-4',
-        question: "What's the importance of social media ads compared to organic social posts?",
-        answer: "Organic posts keep existing followers engaged, but reach for new audiences has dropped sharply on most platforms. Ads are how you get in front of people who don't already know you exist."
-      },
-      {
-        id: 'faq-5',
-        question: "How long before a campaign starts producing results?",
-        answer: "Most accounts start showing usable data within the first one to two weeks. Meaningful optimization and stronger returns usually kick in around the one-month mark, once there's enough data to work with."
+        question: "What social media marketing benefits show up first?",
+        answer: "Usually engagement and brand awareness within the first month, with actual sales and leads following over two to three months as trust builds."
       }
     ],
   },
 
   difference: {
     titleHtml: (
-      <>Why Choose Us for <span className="text-[#FF6A00]">Social Media Ads</span></>
+      <>Why Choose Our <span className="text-[#FF6A00]">Social Media Marketing Agency</span></>
     ),
-    subtitle: "We focus on real returns, not vanity metrics.",
+    subtitle: "We're not an agency that disappears after the strategy call. We're in your inbox weekly with what's working and what we're changing next.",
     cards: [
       {
         id: 'diff-1',
-        title: 'Platform Expertise',
-        description: "We know how each platform's ad system actually behaves, not just the theory from a course.",
-        icon: <Globe className="w-7 h-7" strokeWidth={2.5} />,
+        title: 'Proven Campaigns',
+        description: "Built on strategies that have actually grown other brands, not guesswork on your account.",
+        icon: <Target className="w-7 h-7" strokeWidth={2.5} />,
       },
       {
         id: 'diff-2',
         title: 'Transparent Reporting',
-        description: "You'll see exactly where the budget went and what it produced. No vague monthly summary PDFs.",
-        icon: <TrendingUp className="w-7 h-7" strokeWidth={2.5} />,
+        description: "You'll see real numbers every month, not a highlight reel of your best-performing post.",
+        icon: <DollarSign className="w-7 h-7" strokeWidth={2.5} />,
       },
       {
         id: 'diff-3',
-        title: 'Fast Launch',
-        description: "Campaigns go live quickly once strategy and creative are approved, without cutting corners.",
+        title: 'Fast Turnaround',
+        description: "Content calendars and ad campaigns go live within days, not weeks of back and forth.",
         icon: <Zap className="w-7 h-7" strokeWidth={2.5} />,
       },
       {
         id: 'diff-4',
         title: 'Direct Access',
-        description: "Talk to the person actually managing your campaigns, not an account manager relaying updates.",
+        description: "Talk to the person actually running your accounts, not an account manager relaying updates.",
         icon: <UserCheck className="w-7 h-7" strokeWidth={2.5} />,
       }
     ]
@@ -219,22 +214,22 @@ export const socialMediaMarketingData: ServicePageData = {
     {
       id: 1,
       name: 'Placeholder Client 1',
-      role: 'D2C Skincare Brand',
-      text: "Our first campaign paid for itself within two weeks. We didn't expect results that fast.",
+      role: 'Fashion Brand',
+      text: "\"Our Instagram was basically dead before this. Now it's actually driving DMs that turn into sales every week.\"",
       image: '/images/testimonials/avatar-1.jpg',
     },
     {
       id: 2,
       name: 'Placeholder Client 2',
-      role: 'Furniture Retailer',
-      text: "The retargeting setup alone brought back customers we'd basically written off.",
+      role: 'Restaurant Chain',
+      text: "\"They took over our accounts and within two months our engagement doubled. Wish we'd started sooner.\"",
       image: '/images/testimonials/avatar-2.jpg',
     },
     {
       id: 3,
       name: 'Placeholder Client 3',
-      role: 'B2B SaaS Company',
-      text: "Clear weekly reports, no jargon, and a genuinely lower cost per lead than our last agency.",
+      role: 'Fitness Studio',
+      text: "\"Best decision we made this year. The reporting alone showed us where our ad budget was actually going.\"",
       image: '/images/testimonials/avatar-3.jpg',
     },
   ],

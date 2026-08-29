@@ -82,7 +82,7 @@ export function ServiceImportance({ data }: { data: ServiceImportanceData }) {
             <img
               src={data.imageSrc}
               alt={data.imageAlt}
-              className={`w-full h-auto ${data.layoutVariant === 'wide-image'
+              className={data.imageClassName || `w-full h-auto ${data.layoutVariant === 'wide-image'
                   ? 'max-w-[550px] lg:max-w-[750px] lg:scale-[1.08] lg:origin-center'
                   : 'max-w-[500px]'
                 }`}

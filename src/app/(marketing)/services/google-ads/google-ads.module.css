@@ -1,0 +1,33 @@
+.pageWrapper {
+  --orange: #FF6A00;
+  --orange-light: #FFF8F2;
+  --orange-subtle: #FFF1E6;
+  --orange-border: #FFE8D6;
+
+  --ink-dark: #1A1A1A;
+  --ink-soft: #6B6B6B;
+
+  --surface-white: #FFFFFF;
+  --surface-off: #FAFAFA;
+}
+
+.btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  padding: 0 32px;
+  height: 54px;
+  background-color: var(--orange);
+  color: #fff;
+  font-size: 16px;
+  font-weight: 700;
+  border-radius: 8px;
+  transition: all 0.2s ease;
+  white-space: nowrap;
+}
+
+.btn:hover {
+  background-color: #E65C00;
+  transform: translateY(-1px);
+  box-shadow: 0 4px 12px rgba(255, 106, 0, 0.25);
+}
