@@ -29,11 +29,6 @@ export default function ContactPage() {
           ))}
         </div>
         
-        {/* Squiggle arrow */}
-        <svg className="absolute top-[25%] left-[20%] w-24 h-12 text-[#FF6A00]" viewBox="0 0 100 50" fill="none" xmlns="http://www.w3.org/2000/svg">
-          <path d="M2 35C15 35 20 15 35 15C50 15 55 45 70 45C80 45 85 25 98 15" stroke="currentColor" strokeWidth="2" strokeLinecap="round" />
-          <path d="M88 10L98 15L90 25" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" />
-        </svg>
       </div>
 
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10 pt-24 md:pt-32">
@@ -43,7 +38,12 @@ export default function ContactPage() {
             CONTACT US
           </div>
           <h1 className="text-4xl md:text-5xl lg:text-6xl font-extrabold text-gray-900 mb-6 tracking-tight">
-            Let's Grow Your <span className="text-[#FF6A00]">Business</span> Together
+            Let's Grow Your <span className="text-[#FF6A00] relative inline-block">Business
+              <svg className="hidden md:block absolute -top-8 -right-8 md:-top-12 md:-right-12 w-12 h-12 md:w-16 md:h-16 text-[#FF6A00] transform rotate-12" viewBox="0 0 100 100" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path d="M15 85 C 30 85, 50 60, 85 15" stroke="currentColor" strokeWidth="8" strokeLinecap="round" fill="transparent"/>
+                <path d="M55 15 L 85 15 L 85 45" stroke="currentColor" strokeWidth="8" strokeLinecap="round" strokeLinejoin="round" fill="transparent"/>
+              </svg>
+            </span> Together
           </h1>
           <p className="text-lg text-gray-600">
             Have a question or want to start a project? Fill out the form and our team
@@ -53,7 +53,7 @@ export default function ContactPage() {
 
         <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 lg:gap-12 mb-20">
           {/* Left Column: Contact Info */}
-          <div className="lg:col-span-5 space-y-8">
+          <div className="order-2 lg:order-1 lg:col-span-5 space-y-8">
             <div className="bg-white rounded-3xl p-8 md:p-10 shadow-xl border border-gray-100">
               <h2 className="text-2xl font-bold text-gray-900 mb-4">Let's Talk About Your Growth</h2>
               <p className="text-gray-600 mb-10 leading-relaxed">
@@ -133,7 +133,7 @@ export default function ContactPage() {
           </div>
 
           {/* Right Column: Contact Form */}
-          <div className="lg:col-span-7" id="contact-form">
+          <div className="order-1 lg:order-2 lg:col-span-7" id="contact-form">
             <ContactForm />
           </div>
         </div>

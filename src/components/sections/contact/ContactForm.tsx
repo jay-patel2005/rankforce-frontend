@@ -166,13 +166,31 @@ export default function ContactForm() {
           <label className="text-sm font-semibold text-gray-900 block">
             Choose a Service Category <span className="text-red-500">*</span>
           </label>
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-4">
-            <Controller
-              name="serviceCategory"
-              control={control}
-              rules={{ required: 'Please select a category' }}
-              render={({ field }) => (
-                <>
+          <Controller
+            name="serviceCategory"
+            control={control}
+            rules={{ required: 'Please select a category' }}
+            render={({ field }) => (
+              <>
+                {/* Mobile Dropdown */}
+                <div className="md:hidden relative">
+                  <select
+                    value={field.value}
+                    onChange={(e) => field.onChange(e.target.value)}
+                    className={`w-full px-4 py-3 bg-white border ${errors.serviceCategory ? 'border-red-300 focus:border-red-500 focus:ring-red-500' : 'border-gray-200 focus:border-[#FF6A00] focus:ring-[#FF6A00]'} rounded-xl text-sm outline-none transition-all appearance-none focus:ring-1 text-gray-700 cursor-pointer`}
+                  >
+                    <option value="" disabled>Select a category</option>
+                    <option value="SEO Services">SEO Services</option>
+                    <option value="Digital Marketing">Digital Marketing</option>
+                    <option value="Web Development">Web Development</option>
+                  </select>
+                  <div className="absolute inset-y-0 right-0 pr-4 flex items-center pointer-events-none text-gray-400">
+                    <ChevronDown className="h-5 w-5" />
+                  </div>
+                </div>
+
+                {/* Desktop Cards */}
+                <div className="hidden md:grid grid-cols-3 gap-4">
                   {[
                     { title: 'SEO Services', desc: 'Boost rankings & organic traffic' },
                     { title: 'Digital Marketing', desc: 'Grow brand, leads & online presence' },
@@ -193,7 +211,6 @@ export default function ContactForm() {
                         <div className={`w-5 h-5 rounded-full border flex items-center justify-center ${field.value === cat.title ? 'border-[#FF6A00]' : 'border-gray-300'}`}>
                           {field.value === cat.title && <div className="w-2.5 h-2.5 bg-[#FF6A00] rounded-full"></div>}
                         </div>
-                        {/* Optional icon can go here */}
                       </div>
                       <div className="text-center mt-2">
                         <h4 className="font-semibold text-gray-900 text-sm mb-1">{cat.title}</h4>
@@ -201,10 +218,10 @@ export default function ContactForm() {
                       </div>
                     </label>
                   ))}
-                </>
-              )}
-            />
-          </div>
+                </div>
+              </>
+            )}
+          />
           {errors.serviceCategory && <p className="text-red-500 text-xs mt-1">{errors.serviceCategory.message}</p>}
         </div>
 
