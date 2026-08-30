@@ -3,8 +3,9 @@
 import React, { useEffect, useState } from 'react';
 import Link from 'next/link';
 import Image from 'next/image';
+import { usePathname } from 'next/navigation';
 import { ArrowRight, Calendar, Folder } from 'lucide-react';
-import apiClient from '@/lib/apiClient';
+import { getPublicServiceBlogs, getPublicBlogs } from '@/lib/apiClient';
 
 interface BlogPost {
   _id: string;
@@ -20,13 +21,24 @@ export function FeaturedBlogs() {
   const [blogs, setBlogs] = useState<BlogPost[]>([]);
   const [loading, setLoading] = useState(true);
   const [error, setError] = useState(false);
+  const pathname = usePathname();
 
   useEffect(() => {
     const fetchBlogs = async () => {
       try {
-        const response = await apiClient.get('/blog/latest?limit=3');
-        if (response.data && response.data.success) {
-          setBlogs(response.data.data);
+        let data;
+        const serviceMatch = pathname?.match(/\/services\/([^\/]+)/);
+        
+        if (serviceMatch && serviceMatch[1]) {
+          const res = await getPublicServiceBlogs(serviceMatch[1], { limit: 3 });
+          data = res.data;
+        } else {
+          const res = await getPublicBlogs({ limit: 3 });
+          data = res.data;
+        }
+        
+        if (data) {
+          setBlogs(data);
         } else {
           setError(true);
         }
@@ -39,7 +51,7 @@ export function FeaturedBlogs() {
     };
 
     fetchBlogs();
-  }, []);
+  }, [pathname]);
 
   const formatDate = (dateString: string) => {
     const options: Intl.DateTimeFormatOptions = { year: 'numeric', month: 'short', day: 'numeric' };

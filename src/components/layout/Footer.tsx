@@ -31,7 +31,7 @@ export default function Footer() {
           <div className="flex flex-col gap-6">
             <Link href="/" className="flex items-center gap-2">
               <Image 
-                src="/rankforce-logo.png" 
+                src="/rankforce-logo.webp" 
                 alt="Rank Force Logo" 
                 width={64} 
                 height={64} 
