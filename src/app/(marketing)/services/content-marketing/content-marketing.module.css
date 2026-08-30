@@ -1,0 +1,70 @@
+/* ─── CONTENT MARKETING MODULE CSS ───────────────────────────────────────────────
+   Scoped to .seoContainer on the Content Marketing page only.
+   Mirrors the local-seo.module.css token set exactly so every shared
+   component renders identically on this page.
+   DO NOT import this file in any other service page.
+*/
+
+.seoContainer {
+  --orange: #FF6A00;
+  --orange-hover: #E65C00;
+  --orange-tint1: #FFF1E6;
+  --orange-tint2: #FFE8D6;
+  --dark: #14141A;
+  --dark2: #1c1c26;
+  --white: #FFFFFF;
+  --cream: #FFF8F2;
+  --heading: #1A1A1A;
+  --body: #6B6B6B;
+  --muted: #9CA3AF;
+  --muted-dark: #A0A0A8;
+  --border: #E5E5E5;
+  --shadow: rgba(0, 0, 0, 0.06);
+  --green-text: #16A34A;
+  --green-bg: #DCFCE7;
+  --yellow-text: #CA8A04;
+  --yellow-bg: #FEF9C3;
+  font-family: 'Segoe UI', Arial, sans-serif;
+  color: var(--body);
+  background: var(--white);
+  line-height: 1.7;
+}
+
+.seoContainer h1,
+.seoContainer h2,
+.seoContainer h3 {
+  color: var(--heading);
+  margin-top: 0;
+}
+
+.seoContainer p {
+  margin: 0 0 14px;
+}
+
+.seoContainer a {
+  text-decoration: none;
+}
+
+/* ── CTA button (reuse same shape as other service pages) ── */
+.btn {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  background: var(--orange);
+  color: #fff;
+  font-weight: 700;
+  font-size: 15px;
+  padding: 14px 28px;
+  border-radius: 10px;
+  border: none;
+  cursor: pointer;
+  transition: background 0.2s ease, transform 0.15s ease, box-shadow 0.2s ease;
+  box-shadow: 0 4px 18px rgba(255, 106, 0, 0.28);
+  text-decoration: none;
+}
+
+.btn:hover {
+  background: var(--orange-hover);
+  transform: translateY(-2px);
+  box-shadow: 0 8px 24px rgba(255, 106, 0, 0.36);
+}
