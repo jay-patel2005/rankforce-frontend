@@ -151,15 +151,17 @@ export default function AdminBlogsPage() {
               ) : (
                 blogs.map((blog) => {
                   const seoScoreObj = calculateSeoScore({
-                    title: blog.title,
-                    slug: blog.slug,
-                    excerpt: blog.excerpt,
-                    content: blog.content,
-                    focusKeyword: blog.focusKeyword,
-                    seoTitle: blog.seoTitle,
-                    metaDescription: blog.metaDescription,
+                    title: blog.title || '',
+                    slug: blog.slug || '',
+                    excerpt: blog.excerpt || '',
+                    content: blog.content || '',
+                    focusKeyword: blog.focusKeyword || '',
+                    secondaryKeywords: blog.secondaryKeywords || [],
+                    seoTitle: blog.seoTitle || '',
+                    metaDescription: blog.metaDescription || '',
                     featuredImage: blog.featuredImage?.url,
-                    featuredImageAlt: blog.featuredImageAlt,
+                    featuredImageAlt: blog.featuredImageAlt || '',
+                    canonicalUrl: blog.canonicalUrl || '',
                   });
                   
                   const score = seoScoreObj.score;
