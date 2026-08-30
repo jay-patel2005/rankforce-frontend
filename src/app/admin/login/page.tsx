@@ -163,7 +163,7 @@ export default function AdminLogin() {
           )}
 
           {step === 'credentials' ? (
-            <form className="space-y-6" onSubmit={handleSubmit(onCredentialsSubmit)}>
+            <form className="space-y-6" method="POST" onSubmit={handleSubmit(onCredentialsSubmit)}>
               <div>
                 <label className="block text-sm font-semibold text-gray-900">Email Address</label>
                 <div className="mt-2 relative">
@@ -242,7 +242,7 @@ export default function AdminLogin() {
               </div>
             </form>
           ) : (
-            <form className="space-y-6" onSubmit={onVerifyOtp}>
+            <form className="space-y-6" method="POST" onSubmit={onVerifyOtp}>
               <div>
                 <label className="block text-sm font-semibold text-gray-900 text-center mb-4">
                   Enter 6-digit OTP
