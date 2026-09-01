@@ -86,7 +86,7 @@ export default function ServicesGrid() {
           </h2>
           <p className="mt-3 text-gray-body">
             Comprehensive SEO solutions tailored to your business goals — no
-            fluff, just what works.
+            fluff, just what works. Whether you run a local shop or a growing online store, my job as an <strong>SEO company in Ahmedabad</strong> is to make sure the right customers find you first.
           </p>
         </motion.div>
 

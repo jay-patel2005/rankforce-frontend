@@ -14,22 +14,18 @@ export default function Hero() {
           {/* Left Column - Text Content */}
           <div className="w-full lg:w-[60%] flex flex-col items-center text-center lg:items-start lg:text-left">
             {/* Badge */}
-            <span className="inline-flex items-center gap-2 rounded-full border border-primary/20 bg-primary-50 px-4 py-1.5 text-sm font-medium text-primary">
-              <Star size={14} fill="currentColor" />
-              SEO Freelancer · 4+ Years Experience
-            </span>
+            
 
             {/* Headline */}
-            <h1 className="mt-6 text-4xl leading-[1.15] font-extrabold tracking-tight text-dark-800 sm:text-5xl lg:text-6xl max-w-2xl">
-              SEO That Grows Your{" "}
-              <span className="text-primary">Leads & Sales</span>
-              , Not Just Traffic
+            <h1 className="mt-12 lg:mt-20 text-4xl leading-[1.15] font-extrabold tracking-tight text-dark-800 sm:text-5xl lg:text-6xl max-w-2xl">
+              Best{" "}
+              <span className="text-primary">SEO company in Ahmedabad</span>
             </h1>
 
             {/* Sub-headline */}
             <p className="mt-5 max-w-xl text-lg leading-relaxed text-gray-body sm:text-xl">
               I help businesses rank higher on Google with transparent, data-driven
-              SEO strategies that turn organic traffic into real revenue.
+              SEO strategies that turn organic traffic into real revenue. As a results-focused <strong>SEO company in Ahmedabad</strong>, I work directly with you — no account managers, no jargon.
             </p>
 
             {/* CTA */}
@@ -49,7 +45,7 @@ export default function Hero() {
             {/* Trust line */}
             <p className="mt-6 text-sm text-gray-muted">
               Trusted by <span className="font-semibold text-dark-800">4+</span>{" "}
-              growing businesses across industries
+              growing businesses across Ahmedabad and beyond
             </p>
           </div>
 

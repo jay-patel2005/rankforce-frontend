@@ -7,27 +7,27 @@ import { ChevronDown } from "lucide-react";
 const faqs = [
   {
     question: "How much do your SEO services cost?",
-    answer: "My pricing is transparent and based on the scope of the project. I offer custom packages starting at an honest rate with no hidden fees or long-term lock-in contracts.",
+    answer: "Pricing depends on your goals, competition, and scope of work. Unlike most agencies that lock you into rigid packages, I offer flexible, transparent pricing with no hidden fees. Get in touch for a free audit and a custom quote.",
   },
   {
     question: "How long does it take to see SEO results?",
-    answer: "SEO is a long-term strategy. Typically, you will start seeing measurable improvements in traffic and rankings within 3 to 6 months, depending on your industry and current website state.",
+    answer: "Most clients start noticing movement within 3 to 6 months, depending on their industry. SEO is a long-term investment, but as an experienced SEO company in Ahmedabad, I make sure you see measurable progress along the way.",
   },
   {
     question: "Do you guarantee first-page rankings?",
-    answer: "No ethical SEO expert can guarantee a #1 ranking due to the nature of search algorithms. I do guarantee data-driven, white-hat strategies that have consistently improved rankings and traffic for my clients.",
+    answer: "No ethical SEO service in Ahmedabad can guarantee specific rankings — anyone who promises that isn't being upfront with you. What I can guarantee is white-hat strategies and consistent effort on keywords that matter.",
   },
   {
     question: "What makes working with a freelancer better than an agency?",
-    answer: "When you work with me, you communicate directly with the person executing the strategy. You avoid account manager middlemen, get personalized attention, and don't pay for large agency overheads.",
+    answer: "When you work with typical SEO agencies in Ahmedabad, your project often gets passed between account managers and junior staff. With me, you get direct access to the person doing the actual work, honest pricing, and faster decisions.",
   },
   {
     question: "What is included in your SEO audits?",
-    answer: "My SEO audits cover technical performance, on-page optimization, backlink profile analysis, content gaps, and local SEO factors if applicable. You receive an actionable roadmap for improvement.",
+    answer: "My free SEO audit covers technical health, on-page optimization, keyword opportunities, backlinks, and local search presence — the same process I follow as a SEO service in Ahmedabad for every new client.",
   },
   {
     question: "Do you offer monthly reporting?",
-    answer: "Yes, I provide clear, transparent monthly reports highlighting key metrics like organic traffic growth, keyword rankings, and conversions, along with insights and next steps.",
+    answer: "Yes — every client gets clear, jargon-free monthly reports showing rankings, traffic, and leads. As a SEO service in Ahmedabad built on transparency, you'll always know exactly what you're paying for.",
   },
 ];
 

@@ -10,14 +10,14 @@ const testimonials = [
     id: 1,
     name: "Placeholder Client 1",
     role: "CEO, Tech Startup",
-    text: "JD completely transformed our organic traffic. Within 3 months, we saw a 200% increase in qualified leads. Highly recommended for transparent and effective SEO.",
+    text: "Rank Force completely transformed our organic traffic. Within 3 months, we saw a 200% increase in qualified leads. Highly recommended for transparent and effective SEO.",
     rating: 5,
   },
   {
     id: 2,
     name: "Placeholder Client 2",
-    role: "Founder, Local Business",
-    text: "Working with JD has been a breeze. He explains everything clearly and delivers on his promises. Our local visibility is better than ever.",
+    role: "Founder",
+    text: "Working with Rank Force delivers on its promise of honest, no-nonsense SEO. Best decision we made this year.",
     rating: 5,
   },
   {
@@ -69,6 +69,9 @@ export default function Testimonials() {
               Google Reviews
             </span>
           </div>
+          <p className="mt-4 text-[15px] leading-relaxed text-gray-body sm:text-base">
+            See why clients consistently call Rank Force the <strong>best SEO company in Ahmedabad</strong> when asked who actually delivered results.
+          </p>
         </motion.div>
 
         {/* Carousel */}

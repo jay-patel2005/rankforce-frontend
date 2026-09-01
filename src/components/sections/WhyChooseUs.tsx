@@ -39,7 +39,7 @@ const features = [
     icon: Shield,
     title: "White-Hat Only",
     description:
-      "Ethical SEO strategies that build lasting results. No shortcuts that risk penalties or deindexing.",
+      "Ethical SEO strategies that build lasting results. No shortcuts that risk penalties or delisting.",
   },
   {
     icon: Zap,

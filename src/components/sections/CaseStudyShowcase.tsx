@@ -20,11 +20,11 @@ const caseStudies = [
   {
     slug: "local-business-seo",
     category: "Local SEO",
-    title: "From Page 5 to Google Map Pack for a Local Service Business",
+    title: "From Page 5 to Page 1 in Local Search Rankings",
     metrics: [
-      { icon: TrendingUp, value: "5x", label: "Local Visibility" },
-      { icon: Users, value: "120%", label: "Call Increase" },
-      { icon: Target, value: "15+", label: "Local Keywords" },
+      { icon: TrendingUp, value: "4x", label: "Map Views" },
+      { icon: Users, value: "2.5x", label: "Calls Generated" },
+      { icon: Target, value: "Top 3", label: "Local Pack" },
     ],
   },
 ];
@@ -58,8 +58,7 @@ export default function CaseStudyShowcase() {
               Case Studies
             </h2>
             <p className="mt-2 max-w-lg text-gray-body">
-              Real results from real projects — here&apos;s what honest SEO looks
-              like.
+              Real results from real projects — here&apos;s what honest SEO looks like when it&apos;s handled by a <strong>best SEO company in Ahmedabad</strong> that actually tracks the numbers.
             </p>
           </div>
           <div className="flex gap-2">

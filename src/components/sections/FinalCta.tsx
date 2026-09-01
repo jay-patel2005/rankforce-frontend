@@ -111,7 +111,7 @@ export default function FinalCta() {
             transition={{ duration: 0.5, delay: 0.2 }}
             className="max-w-[650px] lg:max-w-[700px] text-[16px] sm:text-[18px] text-[#475569] leading-[1.5] mb-[24px]"
           >
-            Stop losing customers to your competitors. Let&apos;s build a sustainable organic growth engine for your business.
+            Stop losing customers to your competitors. Partner with a dedicated <strong>SEO company in Ahmedabad</strong> that treats your growth like it&apos;s my own.
           </motion.p>
 
           {/* CTA Button */}

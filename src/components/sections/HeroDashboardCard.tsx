@@ -54,7 +54,7 @@ export default function HeroDashboardCard() {
               JD
             </div>
             <div>
-              <h3 className="text-xs font-semibold text-gray-900">Welcome back, Client</h3>
+              <h3 className="text-xs font-semibold text-gray-900">Welcome back, Client &mdash; here&apos;s how your rankings moved this month</h3>
               <p className="text-[10px] text-gray-500">Last updated 2 min ago</p>
             </div>
           </div>
@@ -109,12 +109,12 @@ export default function HeroDashboardCard() {
 
             <div className="flex items-end justify-between h-[110px] px-1 gap-1.5">
               {[
-                { label: "Dec", h: "30%", color: "bg-blue-900" },
-                { label: "Jan", h: "40%", color: "bg-blue-900" },
-                { label: "Feb", h: "55%", color: "bg-blue-900" },
-                { label: "Mar", h: "65%", color: "bg-blue-900" },
-                { label: "Apr", h: "75%", color: "bg-blue-900" },
-                { label: "May", h: "100%", color: "bg-primary shadow-lg shadow-primary/30" },
+                { label: "Dec", h: "30%", color: "bg-primary" },
+                { label: "Jan", h: "40%", color: "bg-primary" },
+                { label: "Feb", h: "55%", color: "bg-primary" },
+                { label: "Mar", h: "65%", color: "bg-primary" },
+                { label: "Apr", h: "75%", color: "bg-primary" },
+                { label: "May", h: "100%", color: "bg-blue-900 shadow-lg shadow-blue-900/30" },
               ].map((bar, i) => (
                 <div key={bar.label} className="flex flex-col items-center flex-1 gap-1.5 h-full">
                   <div className="w-full flex-1 flex items-end">

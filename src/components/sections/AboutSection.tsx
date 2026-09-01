@@ -48,7 +48,7 @@ export default function AboutSection() {
               About Me
             </span>
             <h2 className="text-3xl font-bold text-dark-800 sm:text-4xl">
-              Hi, I&apos;m JD — Your SEO Partner
+              Meet Rank Force — Your Trusted SEO Company in Ahmedabad
             </h2>
             <p className="mt-4 leading-relaxed text-gray-body">
               I&apos;m a freelance SEO specialist with over 4 years of experience
@@ -57,9 +57,10 @@ export default function AboutSection() {
               strategies that deliver real, measurable results.
             </p>
             <p className="mt-3 leading-relaxed text-gray-body">
-              When you work with me, you get direct access to the person doing
-              the work. No account managers, no handoffs — just a dedicated
-              partner who genuinely cares about your growth.
+              Unlike most <strong>SEO agencies in Ahmedabad</strong> that hand your project off to a junior team, working with me means direct access to the person actually doing the work. As an independent <strong>SEO company in Ahmedabad</strong>, I keep my client list small on purpose, so every project gets the attention it deserves.
+            </p>
+            <p className="mt-3 leading-relaxed text-gray-body">
+              If you&apos;ve been searching for a <strong>best SEO company in Ahmedabad</strong> that actually picks up the phone and explains what&apos;s happening with your rankings, that&apos;s exactly what I offer.
             </p>
 
             <ul className="mt-6 space-y-3">

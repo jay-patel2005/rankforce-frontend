@@ -90,7 +90,7 @@ export default function IndustriesServed() {
             Industries I Serve
           </h2>
           <p className="text-[16px] leading-relaxed text-gray-body sm:text-[18px]">
-            SEO strategies tailored to the unique goals, audiences, and challenges of different industries.
+            SEO strategies tailored to the unique goals, audiences, and challenges of different industries. Working with an experienced <strong>SEO company in Ahmedabad</strong> means your strategy is never one-size-fits-all.
           </p>
         </motion.div>
 
