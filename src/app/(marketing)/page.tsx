@@ -13,9 +13,9 @@ import FinalCta from '@/components/sections/FinalCta';
 import Footer from '@/components/layout/Footer';
 
 export const metadata: Metadata = {
-  title: 'Rank Force — Freelance SEO Expert | Grow Your Leads & Sales',
+  title: 'SEO Company in Ahmedabad | RankForce Digital',
   description:
-    'Grow your business online with expert SEO, content marketing, and digital strategy. Rank Force delivers measurable results.',
+    'Looking for an SEO company in Ahmedabad? RankForce helps businesses grow organic traffic, improve rankings, and generate quality leads with SEO.',
 };
 
 export default function HomePage() {
