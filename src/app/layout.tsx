@@ -3,6 +3,8 @@ import { Inter } from "next/font/google";
 import "./globals.css";
 import FloatingContactButtons from "@/components/layout/FloatingContactButtons";
 
+import ScrollToTop from "@/components/layout/ScrollToTop";
+
 const inter = Inter({
   subsets: ["latin"],
   variable: "--font-inter",
@@ -54,6 +56,7 @@ export default function RootLayout({ children }: LayoutProps<"/">) {
   return (
     <html lang="en" className={`${inter.variable} h-full`}>
       <body className="min-h-full flex flex-col font-sans antialiased">
+        <ScrollToTop />
         {children}
         <FloatingContactButtons />
       </body>
