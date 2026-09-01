@@ -17,9 +17,12 @@ import { ServiceDifference } from '@/components/sections/services/shared/Service
 import { ServiceTestimonials } from '@/components/sections/services/shared/ServiceTestimonials';
 
 export const metadata: Metadata = {
-  title: 'Technical SEO Services | Rank Force',
+  title: 'Technical SEO Services | Fix & Boost Website Rankings',
   description:
-    'Fix crawl errors, improve Core Web Vitals, and build a technically sound site that search engines can rank. Expert technical SEO services that deliver compounding improvements.',
+    'Improve website performance with Technical SEO Services. Fix crawl issues, indexing, site speed, Core Web Vitals, and technical problems to rank better.',
+  alternates: {
+    canonical: '/services/technical-seo',
+  },
 };
 
 export default function TechnicalSEOPage() {

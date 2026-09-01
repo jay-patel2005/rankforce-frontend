@@ -17,9 +17,9 @@ import { ServiceDifference } from '@/components/sections/services/shared/Service
 import { ServiceTestimonials } from '@/components/sections/services/shared/ServiceTestimonials';
 
 export const metadata: Metadata = {
-  title: 'E-commerce SEO Services | Increase Online Store Sales & Organic Traffic',
+  title: 'Ecommerce SEO Services | Grow Online Store Traffic',
   description:
-    'Expert e-commerce SEO services designed to optimize your product pages, categories, and technical foundation to drive high-intent buyers to your store.',
+    'Boost your online store with Ecommerce SEO Services that improve rankings, increase organic traffic, attract buyers, and drive more sales and revenue.',
 };
 
 export default function EcommerceSEOPage() {

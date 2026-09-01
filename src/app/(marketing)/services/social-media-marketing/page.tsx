@@ -17,9 +17,9 @@ import { ServiceDifference } from '@/components/sections/services/shared/Service
 import { ServiceTestimonials } from '@/components/sections/services/shared/ServiceTestimonials';
 
 export const metadata: Metadata = {
-  title: 'Social Media Ads Packages | Rank Force',
+  title: 'Social Media Marketing Services | Grow Your Brand',
   description:
-    'Organic posting alone rarely moves the needle anymore. We build, launch, and manage ad campaigns across the platforms your customers actually spend time on.',
+    'Grow your brand with Social Media Marketing Services that build engagement, reach targeted audiences, strengthen your presence, and drive leads.',
   alternates: {
     canonical: '/services/social-media-marketing',
   },

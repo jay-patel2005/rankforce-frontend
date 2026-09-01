@@ -17,9 +17,9 @@ import { ServiceDifference } from '@/components/sections/services/shared/Service
 import { ServiceTestimonials } from '@/components/sections/services/shared/ServiceTestimonials';
 
 export const metadata: Metadata = {
-  title: 'Email Marketing Services | Rank Force',
+  title: 'Email Marketing Services | Drive Leads & Sales',
   description:
-    'Your list is one of the few marketing channels you actually own. We help you use it properly, with campaigns that get opened, read, and clicked instead of quietly ignored.',
+    'Grow your business with Email Marketing Services that engage customers, nurture leads, increase conversions, and build lasting customer relationships.',
   alternates: {
     canonical: '/services/email-marketing',
   },

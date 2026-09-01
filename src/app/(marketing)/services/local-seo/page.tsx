@@ -17,9 +17,9 @@ import { ServiceDifference } from '@/components/sections/services/shared/Service
 import { ServiceTestimonials } from '@/components/sections/services/shared/ServiceTestimonials';
 
 export const metadata: Metadata = {
-  title: '[LOCAL SEO PAGE TITLE] | Rank Force',
+  title: 'Local SEO Services | Boost Local Search Rankings',
   description:
-    '[LOCAL SEO META DESCRIPTION — describe your local SEO service and its business benefit in 150-160 characters.]',
+    'Get expert Local SEO Services to improve Google rankings, attract nearby customers, boost local visibility, and generate more qualified leads for your business.',
 };
 
 export default function LocalSEOPage() {

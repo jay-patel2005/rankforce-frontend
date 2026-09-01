@@ -19,7 +19,7 @@ import { ServiceTestimonials } from '@/components/sections/services/shared/Servi
 export const metadata: Metadata = {
   title: 'Meta Ads Services | Rank Force',
   description:
-    'We build and manage meta ads that actually convert, not just get seen. Targeting, creative, and budget handled by a team that lives inside Ads Manager every day.',
+    'Grow your business with Meta Ads services that reach the right audience, increase engagement, generate quality leads, and drive more sales.',
   alternates: {
     canonical: '/services/meta-ads',
   },

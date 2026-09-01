@@ -17,9 +17,9 @@ import { ServiceDifference } from '@/components/sections/services/shared/Service
 import { ServiceTestimonials } from '@/components/sections/services/shared/ServiceTestimonials';
 
 export const metadata: Metadata = {
-  title: 'AEO and GEO Services | Rank Force',
+  title: 'AEO & GEO Services | AI Search Optimization Experts',
   description:
-    'Everything you need to know about Answer Engine Optimization (AEO) and Generative Engine Optimization (GEO) to get your brand quoted inside AI-generated answers like ChatGPT and Google AI Overview.',
+    'Boost visibility across AI search and answer engines with AEO & GEO services. Optimize your content to earn citations, mentions, and qualified traffic.',
   alternates: {
     canonical: '/services/aeo-geo',
   },

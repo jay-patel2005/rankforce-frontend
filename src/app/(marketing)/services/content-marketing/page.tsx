@@ -17,9 +17,9 @@ import { ServiceDifference } from '@/components/sections/services/shared/Service
 import { ServiceTestimonials } from '@/components/sections/services/shared/ServiceTestimonials';
 
 export const metadata: Metadata = {
-  title: 'Content Marketing Services | RankForce',
+  title: 'Content Marketing Services | Grow Traffic & Leads',
   description:
-    'Everything you need to know about content marketing services — the types of content that actually convert, how to check what\'s missing in your current strategy, and the approach that consistently brings in organic traffic.',
+    'Grow your brand with Content Marketing Services that attract the right audience, increase organic traffic, build authority, and generate quality leads.',
   alternates: {
     canonical: '/services/content-marketing',
   },

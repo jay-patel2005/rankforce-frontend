@@ -17,9 +17,9 @@ import { ServiceDifference } from '@/components/sections/services/shared/Service
 import { ServiceTestimonials } from '@/components/sections/services/shared/ServiceTestimonials';
 
 export const metadata: Metadata = {
-  title: 'Google Ads Agency | Rank Force',
+  title: 'Google Ads Services | Drive More Leads & Sales',
   description:
-    'A campaign that looks fine on paper can still burn through budget with nothing to show for it. We build, launch, and manage search, shopping, and remarketing campaigns.',
+    'Grow your business with Google Ads services that reach high-intent customers, increase website traffic, generate quality leads, and boost sales.',
   alternates: {
     canonical: '/services/google-ads',
   },

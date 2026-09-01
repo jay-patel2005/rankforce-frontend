@@ -17,9 +17,9 @@ import { ServiceDifference } from '@/components/sections/services/shared/Service
 import { ServiceTestimonials } from '@/components/sections/services/shared/ServiceTestimonials';
 
 export const metadata: Metadata = {
-  title: 'SEO Audit Services | Rank Force',
+  title: 'SEO Audit Services | Find & Fix Ranking Issues',
   description:
-    "A proper seo audit is the fastest way to find out why your rankings aren't moving and what to fix first. We dig through crawl data, content gaps, and technical errors.",
+    "Identify SEO issues and unlock growth with expert SEO Audit Services. Analyze technical, on-page, content, and backlink factors to improve rankings.",
   alternates: {
     canonical: '/services/seo-audit',
   },
