@@ -6,7 +6,7 @@ export const ecommerceSeoData: ServicePageData = {
   slug: 'ecommerce-seo',
   hero: {
     titleHtml: (
-      <>Best <span className="text-[#FF6A00]">E-commerce SEO Service</span> Guide for Growing Online Stores</>
+      <>Best <span className="text-[#FF6A00]">Ecommerce SEO Service</span> Guide for Growing Online Stores</>
     ),
     description: "Everything you need to know about ecommerce SEO — the types of SEO your store needs, the common issues costing you sales, and the strategies that consistently move rankings.",
     buttonText: "Get a Free SEO Audit",
@@ -14,7 +14,7 @@ export const ecommerceSeoData: ServicePageData = {
     rightComponent: <EcommerceHeroDashboard />
   },
   importance: {
-    titleHtml: <><span className="text-[#FF6A00]">E-commerce SEO</span> Services In India</>,
+    titleHtml: <><span className="text-[#FF6A00]">Ecommerce SEO</span> Services In India</>,
     heading: "What Makes Ecommerce SEO Important for Your Store?",
     paragraphs: [
       "Here's the thing about running an online store — you can have the best products in your niche and still lose to a competitor with a weaker catalog, just because they show up first on Google. That's the whole job of an ecommerce SEO service: making sure your product pages actually get found by people who are ready to buy, not just people browsing around.",
@@ -22,7 +22,7 @@ export const ecommerceSeoData: ServicePageData = {
       "So yes, an ecommerce SEO service looks nothing like a standard SEO package, and it shouldn't. It's built around your whole catalog, not a handful of landing pages, and it needs to keep working as your store adds new products every month."
     ],
     imageSrc: "/images/services/ecommerce-seo-diagram.webp",
-    imageAlt: "E-commerce SEO Diagram",
+    imageAlt: "Ecommerce SEO Diagram",
     layoutVariant: 'wide-image'
   },
   statBand: {
@@ -40,7 +40,7 @@ export const ecommerceSeoData: ServicePageData = {
     quote: "An ecommerce SEO service isn't a one-time setup — it's the ongoing engine that keeps every product page working for you."
   },
   tools: {
-    title: "Tools We Use For E-commerce SEO",
+    title: "Tools We Use For Ecommerce SEO",
     subtitle: "",
     tools: [
       { name: 'Ahrefs', logo: '/images/tools/ahrefs-logo.webp' },
@@ -52,7 +52,7 @@ export const ecommerceSeoData: ServicePageData = {
     ]
   },
   implement: {
-    badge: "Types of E-commerce SEO",
+    badge: "Types of Ecommerce SEO",
     title: "Things We Implement in Ecommerce SEO",
     description: "Ecommerce SEO isn't one single fix — it's a bunch of moving parts that work together. Here's what our ecommerce SEO company actually does, page by page, for every store we take on.",
     items: [
@@ -90,7 +90,7 @@ export const ecommerceSeoData: ServicePageData = {
     {id: "faq-4",question: "Why should I hire an ecommerce SEO company instead of doing it myself?",answer:"Honestly? Because a best ecommerce SEO agency has already made the mistakes on someone else's store, not yours. Once you're past a few hundred SKUs, doing it alone stops being realistic — the tools and time add up fast.",},]
   },
   difference: {
-    titleHtml: <>Why Choose Our<br />E-commerce SEO Services</>,
+    titleHtml: <>Why Choose Our<br />Ecommerce SEO Services</>,
     subtitle: "",
    cards: [
   {id: "d1",title: "Proven Strategies",description:"Built on optimization principles that have actually worked before, not trial and error on your budget.",icon: <TrendingUp className="w-7 h-7" strokeWidth={2.5} />},
@@ -100,7 +100,7 @@ export const ecommerceSeoData: ServicePageData = {
 ],
   },
   testimonials: [
-    { id: 1, name: "Placeholder Client 4", role: "Owner, E-commerce Store", text: "Our organic sales doubled after fixing our category structure and technical issues.", image: "https://ui-avatars.com/api/?name=Client+4&background=FF6A00&color=fff" },
+    { id: 1, name: "Placeholder Client 4", role: "Owner, Ecommerce Store", text: "Our organic sales doubled after fixing our category structure and technical issues.", image: "https://ui-avatars.com/api/?name=Client+4&background=FF6A00&color=fff" },
     { id: 2, name: "Placeholder Client 5", role: "Marketing Director", text: "Finally an agency that understands faceted navigation and product SEO.", image: "https://ui-avatars.com/api/?name=Client+5&background=FF6A00&color=fff" },
     { id: 3, name: "Placeholder Client 6", role: "Founder, DTC Brand", text: "We rely less on paid ads now because our organic traffic is so strong.", image: "https://ui-avatars.com/api/?name=Client+6&background=FF6A00&color=fff" },
   ]
