@@ -8,7 +8,11 @@ import { useAuth } from '@/hooks/useAuth';
 import { useRouter } from 'next/navigation';
 import Link from 'next/link';
 
+const OTP_SESSION_KEY = 'rwd_otp_email';
+
 export default function AdminLogin() {
+  // Always start with safe SSR defaults — sessionStorage is client-only.
+  // We restore the saved OTP step inside a useEffect after mount to avoid hydration mismatch.
   const [step, setStep] = useState<'credentials' | 'otp'>('credentials');
   const [email, setEmail] = useState('');
   
@@ -25,6 +29,15 @@ export default function AdminLogin() {
   const router = useRouter();
 
   const { register, handleSubmit, formState: { errors } } = useForm();
+
+  // Restore OTP step from sessionStorage after mount (client-only, avoids hydration mismatch)
+  useEffect(() => {
+    const savedEmail = sessionStorage.getItem(OTP_SESSION_KEY);
+    if (savedEmail) {
+      setEmail(savedEmail);
+      setStep('otp');
+    }
+  }, []);
 
   useEffect(() => {
     if (user) {
@@ -49,11 +62,16 @@ export default function AdminLogin() {
     try {
       const res = await loginAdmin({ email: data.email, password: data.password });
       if (res.success && res.requiresOtp) {
-        setEmail(data.email);
+        const normalizedEmail = data.email.toLowerCase().trim();
+        setEmail(normalizedEmail);
+        // Persist in sessionStorage so page refreshes don't wipe the email
+        sessionStorage.setItem(OTP_SESSION_KEY, normalizedEmail);
         setStep('otp');
+        setOtp(['', '', '', '', '', '']); // Clear any previous OTP
         setCooldown(60); // Start 60s cooldown
       } else if (res.success) {
         // Fallback if somehow OTP is skipped
+        sessionStorage.removeItem(OTP_SESSION_KEY);
         await checkAuth();
         router.push('/admin/dashboard');
       } else {
@@ -94,18 +112,39 @@ export default function AdminLogin() {
       return;
     }
 
+    // Safety check — email must be present
+    if (!email) {
+      setErrorMsg('Session expired. Please go back and login again.');
+      setStep('credentials');
+      sessionStorage.removeItem(OTP_SESSION_KEY);
+      return;
+    }
+
     setIsSubmitting(true);
     setErrorMsg('');
     try {
-      const res = await verifyOtp({ email, otp: otpString });
+      const res = await verifyOtp({ email: email.toLowerCase().trim(), otp: otpString });
       if (res.success) {
+        sessionStorage.removeItem(OTP_SESSION_KEY);
         await checkAuth();
         router.push('/admin/dashboard');
       } else {
         setErrorMsg(res.message || 'Invalid verification code.');
       }
     } catch (error: any) {
-      setErrorMsg(error.message || 'Invalid verification code. Please try again.');
+      const msg = error.message || '';
+      // If OTP not found, it means they need to login fresh
+      if (msg.includes('No pending OTP') || msg.includes('log in again')) {
+        sessionStorage.removeItem(OTP_SESSION_KEY);
+        setErrorMsg('Your OTP session has expired. Please log in again with your credentials.');
+        setTimeout(() => {
+          setStep('credentials');
+          setOtp(['', '', '', '', '', '']);
+          setErrorMsg('');
+        }, 3000);
+      } else {
+        setErrorMsg(msg || 'Invalid verification code. Please try again.');
+      }
     } finally {
       setIsSubmitting(false);
     }
@@ -120,6 +159,7 @@ export default function AdminLogin() {
       const res = await resendOtp({ email });
       if (res.success) {
         setCooldown(60);
+        setOtp(['', '', '', '', '', '']); // Clear inputs for fresh OTP
       } else {
         setErrorMsg(res.message || 'Failed to resend OTP.');
       }
@@ -291,7 +331,12 @@ export default function AdminLogin() {
                 
                 <button
                   type="button"
-                  onClick={() => setStep('credentials')}
+                  onClick={() => {
+                    setStep('credentials');
+                    setOtp(['', '', '', '', '', '']);
+                    setErrorMsg('');
+                    sessionStorage.removeItem(OTP_SESSION_KEY);
+                  }}
                   className="text-sm text-gray-500 hover:text-gray-800 flex items-center gap-1 mt-2"
                 >
                   <ArrowLeft className="w-4 h-4" /> Back to Login
