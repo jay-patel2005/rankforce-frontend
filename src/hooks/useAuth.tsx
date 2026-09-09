@@ -54,10 +54,13 @@ export const AuthProvider = ({ children }: { children: ReactNode }) => {
   const logout = async () => {
     try {
       await apiLogout();
-      setUser(null);
-      router.push('/admin/login');
     } catch (error) {
       console.error('Logout error', error);
+    } finally {
+      // Always clear the local token and user state
+      localStorage.removeItem('rwd_token');
+      setUser(null);
+      router.push('/admin/login');
     }
   };
 

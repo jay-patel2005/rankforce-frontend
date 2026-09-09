@@ -126,6 +126,10 @@ export default function AdminLogin() {
       const res = await verifyOtp({ email: email.toLowerCase().trim(), otp: otpString });
       if (res.success) {
         sessionStorage.removeItem(OTP_SESSION_KEY);
+        // Store token in localStorage so Authorization header works cross-origin in production
+        if (res.token) {
+          localStorage.setItem('rwd_token', res.token);
+        }
         await checkAuth();
         router.push('/admin/dashboard');
       } else {
