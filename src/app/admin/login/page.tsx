@@ -63,9 +63,10 @@ export default function AdminLogin() {
       const res = await loginAdmin({ email: data.email, password: data.password });
       if (res.success && res.requiresOtp) {
         const normalizedEmail = data.email.toLowerCase().trim();
-        setEmail(normalizedEmail);
-        // Persist in sessionStorage so page refreshes don't wipe the email
+        // Save to sessionStorage FIRST — before any state update — so it's always available
+        // even if the component remounts (e.g. Next.js production navigation quirks)
         sessionStorage.setItem(OTP_SESSION_KEY, normalizedEmail);
+        setEmail(normalizedEmail);
         setStep('otp');
         setOtp(['', '', '', '', '', '']); // Clear any previous OTP
         setCooldown(60); // Start 60s cooldown
@@ -112,18 +113,26 @@ export default function AdminLogin() {
       return;
     }
 
-    // Safety check — email must be present
-    if (!email) {
+    // Always read email from sessionStorage as source of truth.
+    // React state can be lost on component remount in Next.js production builds.
+    const resolvedEmail = sessionStorage.getItem(OTP_SESSION_KEY) || email;
+
+    if (!resolvedEmail) {
       setErrorMsg('Session expired. Please go back and login again.');
       setStep('credentials');
       sessionStorage.removeItem(OTP_SESSION_KEY);
       return;
     }
 
+    // Sync state if it somehow got out of sync
+    if (resolvedEmail !== email) {
+      setEmail(resolvedEmail);
+    }
+
     setIsSubmitting(true);
     setErrorMsg('');
     try {
-      const res = await verifyOtp({ email: email.toLowerCase().trim(), otp: otpString });
+      const res = await verifyOtp({ email: resolvedEmail.toLowerCase().trim(), otp: otpString });
       if (res.success) {
         sessionStorage.removeItem(OTP_SESSION_KEY);
         // Store token in localStorage so Authorization header works cross-origin in production
@@ -157,10 +166,14 @@ export default function AdminLogin() {
   const handleResendOtp = async () => {
     if (cooldown > 0) return;
     
+    // Always read from sessionStorage as source of truth in production
+    const resolvedEmail = sessionStorage.getItem(OTP_SESSION_KEY) || email;
+    if (!resolvedEmail) return;
+
     setIsSubmitting(true);
     setErrorMsg('');
     try {
-      const res = await resendOtp({ email });
+      const res = await resendOtp({ email: resolvedEmail });
       if (res.success) {
         setCooldown(60);
         setOtp(['', '', '', '', '', '']); // Clear inputs for fresh OTP
