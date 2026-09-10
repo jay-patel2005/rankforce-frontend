@@ -46,9 +46,9 @@ export const servicesMenu: ServiceCategory[] = [
       { label: "Ecommerce SEO", href: "/services/ecommerce-seo", icon: ShoppingCart },
       { label: "Technical SEO", href: "/services/technical-seo", icon: Settings },
       { label: "On Page SEO", href: "/services/on-page-seo", icon: FileText },
-      { label: "Global / International SEO", href: "/services/global-seo", icon: Globe },
+      // { label: "Global / International SEO", href: "/services/global-seo", icon: Globe },
       { label: "AEO & GEO", href: "/services/aeo-geo", icon: Sparkles },
-      { label: "Keyword Research", href: "/services/keyword-research", icon: Search },
+      // { label: "Keyword Research", href: "/services/keyword-research", icon: Search },
       { label: "SEO Audit", href: "/services/seo-audit", icon: BarChart2 },
     ],
   },
@@ -63,19 +63,19 @@ export const servicesMenu: ServiceCategory[] = [
       { label: "Email Marketing", href: "/services/email-marketing", icon: Mail },
     ],
   },
-  {
-    title: "WEBSITE DEVELOPMENT",
-    items: [
-      { label: "Full-Stack Development", href: "/services/full-stack-development", icon: Layers },
-      { label: "SaaS Development", href: "/services/saas-development", icon: Cloud },
-      { label: "Business Website Development", href: "/services/business-websites", icon: Monitor },
-      { label: "Ecommerce Development", href: "/services/ecommerce-development", icon: ShoppingCart },
-      { label: "Landing Page Development", href: "/services/landing-pages", icon: Rocket },
-      { label: "Web Application Development", href: "/services/web-applications", icon: Zap },
-      { label: "API & Third-Party Integrations", href: "/services/api-integrations", icon: LinkIcon },
-      { label: "Website Maintenance & Optimization", href: "/services/website-maintenance", icon: Wrench },
-    ],
-  },
+  // {
+  //   title: "WEBSITE DEVELOPMENT",
+  //   items: [
+  //     { label: "Full-Stack Development", href: "/services/full-stack-development", icon: Layers },
+  //     { label: "SaaS Development", href: "/services/saas-development", icon: Cloud },
+  //     { label: "Business Website Development", href: "/services/business-websites", icon: Monitor },
+  //     { label: "Ecommerce Development", href: "/services/ecommerce-development", icon: ShoppingCart },
+  //     { label: "Landing Page Development", href: "/services/landing-pages", icon: Rocket },
+  //     { label: "Web Application Development", href: "/services/web-applications", icon: Zap },
+  //     { label: "API & Third-Party Integrations", href: "/services/api-integrations", icon: LinkIcon },
+  //     { label: "Website Maintenance & Optimization", href: "/services/website-maintenance", icon: Wrench },
+  //   ],
+  // },
 ];
 
 /* ── Desktop item ──────────────────────────────────── */
