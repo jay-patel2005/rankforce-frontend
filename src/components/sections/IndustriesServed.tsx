@@ -95,7 +95,7 @@ export default function IndustriesServed() {
         </motion.div>
 
         {/* Connected Flow Layout */}
-        <div className="relative flex w-full flex-col gap-y-12 md:flex-row md:gap-y-0 md:overflow-x-auto md:pb-8 md:pt-4 md:snap-x md:snap-mandatory lg:overflow-x-visible lg:pb-0 lg:pt-0">
+        <div className="relative grid grid-cols-2 gap-y-10 gap-x-4 md:flex md:flex-row md:gap-y-0 md:overflow-x-auto md:pb-8 md:pt-4 md:snap-x md:snap-mandatory lg:overflow-x-visible lg:pb-0 lg:pt-0">
           {industries.map((item, i) => {
             const Icon = item.icon;
             const nextItem = industries[i + 1];
@@ -130,8 +130,8 @@ export default function IndustriesServed() {
                   </svg>
                 </div>
 
-                {/* Vertical Dashed Connector (Mobile) */}
-                <div className={`absolute top-[50px] left-[50%] -z-10 h-[calc(100%+3rem)] w-4 -translate-x-1/2 md:hidden ${isLast ? 'hidden' : 'block'}`}>
+                {/* Vertical Dashed Connector (Mobile) — hidden in 2-col grid */}
+                <div className={`absolute top-[50px] left-[50%] -z-10 h-[calc(100%+3rem)] w-4 -translate-x-1/2 hidden md:hidden ${isLast ? 'hidden' : ''}`}>
                   <svg viewBox="0 0 4 100" preserveAspectRatio="none" className="w-full h-full">
                     <line
                       x1="2" y1="0" x2="2" y2="100"
@@ -180,11 +180,11 @@ export default function IndustriesServed() {
                 </div>
 
                 {/* Text Content */}
-                <div className={`mt-6 text-left px-1 ${isLast ? 'min-w-[185px] max-w-[185px]' : 'w-full max-w-[160px]'}`}>
-                  <h3 className="mb-2 text-[15px] font-bold text-dark-800 transition-colors duration-300 group-hover:text-black lg:text-[14px] xl:text-[15px]">
+                <div className={`mt-6 text-center md:text-left px-1 ${isLast ? 'min-w-[185px] max-w-[185px]' : 'w-full max-w-[160px]'}`}>
+                  <h3 className="mb-2 text-[13px] font-bold text-dark-800 transition-colors duration-300 group-hover:text-black md:text-[15px] lg:text-[14px] xl:text-[15px]">
                     {item.label}
                   </h3>
-                  <p className="text-[14px] leading-relaxed text-gray-500 lg:text-[12px] xl:text-[13px]">
+                  <p className="text-[12px] leading-relaxed text-gray-500 md:text-[14px] lg:text-[12px] xl:text-[13px]">
                     {item.description}
                   </p>
                 </div>

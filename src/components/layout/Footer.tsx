@@ -26,9 +26,9 @@ export default function Footer() {
   return (
     <footer className="bg-dark-navy pt-6 lg:pt-8 text-white">
       <div className="mx-auto max-w-7xl px-5 lg:px-8">
-        <div className="grid gap-12 pb-16 md:grid-cols-2 lg:grid-cols-4 lg:gap-8">
+        <div className="grid grid-cols-2 gap-x-6 gap-y-10 pb-16 md:grid-cols-2 md:gap-12 lg:grid-cols-4 lg:gap-8">
           {/* Brand Col */}
-          <div className="flex flex-col gap-6">
+          <div className="col-span-2 flex flex-col gap-6 md:col-span-1">
             <Link href="/" className="flex items-center gap-2">
               <Image 
                 src="/rankforce-logo.webp" 
@@ -103,7 +103,7 @@ export default function Footer() {
           </div>
 
           {/* Contact */}
-          <div>
+          <div className="col-span-2 md:col-span-1">
             <h3 className="mb-6 text-lg font-bold text-white">Contact</h3>
             <ul className="flex flex-col gap-4 text-[15px] text-white/70">
               <li className="flex items-start gap-3">

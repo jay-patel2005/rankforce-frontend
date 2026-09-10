@@ -4,10 +4,10 @@ import Link from "next/link";
 import { motion } from "framer-motion";
 import {
   MapPin,
-  Globe,
+  TrendingUp,
   ShoppingCart,
   Settings,
-  Bot,
+  Sparkles,
   FileText,
   ArrowRight,
 } from "lucide-react";
@@ -21,11 +21,11 @@ const services = [
       "Dominate Google Maps and local search results. Get found by customers in your area who are ready to buy.",
   },
   {
-    icon: Globe,
-    title: "Global SEO",
-    slug: "global-seo",
+    icon: TrendingUp,
+    title: "Meta Ads",
+    slug: "meta-ads",
     description:
-      "Expand your reach internationally with strategic SEO that targets audiences across geographies.",
+      "Drive targeted leads and sales with high-converting Meta ad campaigns across Facebook and Instagram.",
   },
   {
     icon: ShoppingCart,
@@ -42,11 +42,11 @@ const services = [
       "Fix crawlability issues, speed up your site, and build the technical foundation search engines love.",
   },
   {
-    icon: Bot,
-    title: "AI SEO",
-    slug: "ai-seo",
+    icon: Sparkles,
+    title: "AEO & GEO",
+    slug: "aeo-geo",
     description:
-      "Leverage AI-powered strategies for content optimization, keyword research, and competitive analysis.",
+      "Optimize for AI answer engines and generative search to get your brand cited by ChatGPT, Gemini, and more.",
   },
   {
     icon: FileText,
