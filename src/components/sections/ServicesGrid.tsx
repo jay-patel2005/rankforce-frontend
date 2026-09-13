@@ -107,7 +107,7 @@ export default function ServicesGrid() {
                   href={`/services/${service.slug}`}
                   className="group flex h-full flex-col rounded-2xl border border-gray-border/60 bg-white p-7 shadow-[var(--shadow-card)] transition-all duration-300 hover:-translate-y-1 hover:border-primary/20 hover:shadow-[var(--shadow-card-hover)]"
                 >
-                  <div className="mb-5 flex h-12 w-12 items-center justify-center rounded-xl bg-primary-50 text-primary transition-colors duration-300 group-hover:bg-primary group-hover:text-white">
+                  <div suppressHydrationWarning className="mb-5 flex h-12 w-12 items-center justify-center rounded-xl bg-primary-50 text-primary transition-colors duration-300 group-hover:bg-primary group-hover:text-white">
                     <Icon size={24} />
                   </div>
                   <h3 className="mb-2 text-lg font-bold text-dark-800">

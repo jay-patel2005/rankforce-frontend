@@ -146,18 +146,54 @@ export default function AdminLogin() {
       }
     } catch (error: any) {
       const msg = error.message || '';
-      // If OTP not found, it means they need to login fresh
-      if (msg.includes('No pending OTP') || msg.includes('log in again')) {
+
+      // Safe diagnostic log — never logs OTP or secrets, only helps trace production failures
+      console.error('[OTP Verify] Error:', {
+        message: msg,
+        apiBase: process.env.NEXT_PUBLIC_API_URL || '(not set — using localhost fallback!)',
+        email: resolvedEmail,
+      });
+
+      // Network failure: the API URL is wrong (e.g. hitting localhost in production)
+      if (
+        msg.includes('Network Error') ||
+        msg.includes('ERR_CONNECTION_REFUSED') ||
+        msg.includes('ECONNREFUSED') ||
+        msg.includes('Failed to fetch') ||
+        msg.includes('timeout')
+      ) {
+        setErrorMsg(
+          'Cannot reach the server. Please check your internet connection and try again. If this persists, the service may be temporarily unavailable.'
+        );
+        return;
+      }
+
+      // OTP not found in DB — need fresh login
+      if (msg.includes('No pending OTP') || msg.includes('Please log in again')) {
         sessionStorage.removeItem(OTP_SESSION_KEY);
-        setErrorMsg('Your OTP session has expired. Please log in again with your credentials.');
+        setErrorMsg('No active OTP session found. Please log in again.');
         setTimeout(() => {
           setStep('credentials');
           setOtp(['', '', '', '', '', '']);
           setErrorMsg('');
         }, 3000);
-      } else {
-        setErrorMsg(msg || 'Invalid verification code. Please try again.');
+        return;
       }
+
+      // OTP expired
+      if (msg.includes('expired') || msg.includes('log in again')) {
+        sessionStorage.removeItem(OTP_SESSION_KEY);
+        setErrorMsg(msg || 'Your OTP has expired. Please log in again.');
+        setTimeout(() => {
+          setStep('credentials');
+          setOtp(['', '', '', '', '', '']);
+          setErrorMsg('');
+        }, 3000);
+        return;
+      }
+
+      // Any other error (invalid OTP, too many attempts, server error) — show actual message
+      setErrorMsg(msg || 'Verification failed. Please try again.');
     } finally {
       setIsSubmitting(false);
     }
