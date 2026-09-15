@@ -1,5 +1,6 @@
 "use client";
 
+import Image from "next/image";
 import Link from "next/link";
 import { motion } from "framer-motion";
 import { ArrowRight, CheckCircle } from "lucide-react";
@@ -24,13 +25,17 @@ export default function AboutSection() {
             transition={{ duration: 0.6 }}
             className="relative"
           >
-            <div className="relative mx-auto aspect-[4/5] max-w-md overflow-hidden rounded-2xl bg-gray-light">
-              {/* Placeholder — replace with next/Image and JD's photo */}
-              <div className="flex h-full w-full flex-col items-center justify-center bg-gradient-to-br from-primary-50 to-cream text-gray-muted">
-                <div className="mb-4 flex h-24 w-24 items-center justify-center rounded-full bg-primary/10 text-4xl font-bold text-primary">
-                  JD
-                </div>
-                <p className="text-sm">Photo coming soon</p>
+            <div className="relative mx-auto w-full max-w-md">
+              {/* Photo */}
+              <div className="relative aspect-[4/5] w-full overflow-hidden rounded-2xl shadow-xl">
+                <Image
+                  src="/images/rank.webp"
+                  alt="Jay Doshi — SEO Specialist at Rank Force, Ahmedabad"
+                  fill
+                  sizes="(max-width: 768px) 90vw, (max-width: 1200px) 45vw, 420px"
+                  className="object-cover object-top"
+                  priority
+                />
               </div>
               {/* Orange accent corner */}
               <div className="absolute -bottom-3 -right-3 -z-10 h-full w-full rounded-2xl bg-primary/10" />

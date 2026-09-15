@@ -165,6 +165,10 @@ export default function BlogForm({ initialData, isEdit = false }: BlogFormProps)
       ['link', 'image'],
       ['clean'],
     ],
+    clipboard: {
+      // Strips inline styles/fonts when pasting from Word or Google Docs
+      matchVisual: false,
+    },
   };
 
   return (

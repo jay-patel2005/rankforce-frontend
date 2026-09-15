@@ -17,13 +17,13 @@ export default function FeaturedBlog({ post }: FeaturedBlogProps) {
         <div className="flex flex-col lg:flex-row">
           
           {/* Left: Image Container */}
-          <div className="w-full lg:w-[55%] relative overflow-hidden">
+          <div className="w-full lg:w-[55%] relative overflow-hidden h-[260px] sm:h-[320px] lg:h-auto min-h-0">
             <Link href={`/blog/${post.slug}`} className="block w-full h-full">
-              <div className="w-full aspect-[1200/628] lg:h-full lg:aspect-auto relative">
+              <div className="w-full h-full relative" style={{ minHeight: '260px' }}>
                 <img 
                   src={post.image} 
                   alt={post.imageAlt} 
-                  className="w-full h-full object-cover transform group-hover:scale-105 transition-transform duration-500 ease-out"
+                  className="w-full h-full object-cover transform group-hover:scale-105 transition-transform duration-500 ease-out absolute inset-0"
                 />
               </div>
             </Link>

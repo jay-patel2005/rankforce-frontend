@@ -4,13 +4,13 @@ import HeroDashboardCard from "./HeroDashboardCard";
 
 export default function Hero() {
   return (
-    <section className="relative overflow-hidden bg-white pt-24 pb-1 md:pt-28 lg:pt-32 lg:pb-0">
+    <section className="relative overflow-hidden bg-white pt-20 pb-10 md:pt-24 md:pb-14 lg:pt-28 lg:pb-16 xl:pt-32 xl:pb-20">
       {/* Subtle gradient orb */}
       <div className="pointer-events-none absolute -top-40 right-0 h-[500px] w-[500px] rounded-full bg-primary/5 blur-3xl" />
       <div className="pointer-events-none absolute -bottom-20 -left-20 h-[400px] w-[400px] rounded-full bg-primary/4 blur-3xl" />
 
       <div className="mx-auto max-w-7xl px-5 lg:px-8">
-        <div className="flex flex-col lg:flex-row items-center gap-12 lg:gap-8">
+        <div className="flex flex-col lg:flex-row items-center gap-10 lg:gap-8 xl:gap-12">
           {/* Left Column - Text Content */}
           <div className="w-full lg:w-[60%] flex flex-col items-center text-center lg:items-start lg:text-left">
             {/* Badge */}
@@ -50,8 +50,10 @@ export default function Hero() {
           </div>
 
           {/* Right Column - Dashboard Card Mockup (Hidden on mobile) */}
-          <div className="hidden md:flex w-full lg:w-[40%] justify-center lg:justify-end mt-12 lg:mt-0 max-w-full overflow-hidden px-4 sm:px-12 lg:px-0">
-            <HeroDashboardCard />
+          <div className="hidden md:flex w-full lg:w-[40%] items-center justify-center lg:justify-end mt-6 lg:mt-0 overflow-hidden">
+            <div className="w-full max-w-[480px] lg:max-w-[500px] xl:max-w-[520px] flex items-center justify-center">
+              <HeroDashboardCard />
+            </div>
           </div>
         </div>
       </div>

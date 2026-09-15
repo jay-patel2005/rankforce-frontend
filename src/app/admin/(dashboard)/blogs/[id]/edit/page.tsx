@@ -7,11 +7,11 @@ import { ArrowLeft } from 'lucide-react';
 import { getAdminBlogById } from '@/lib/apiClient';
 
 interface EditBlogPageProps {
-  params: { id: string };
+  params: Promise<{ id: string }>;
 }
 
 export default function EditBlogPage({ params }: EditBlogPageProps) {
-  const { id } = params;
+  const { id } = React.use(params);
   const [blogData, setBlogData] = useState<any>(null);
   const [loading, setLoading] = useState(true);
   const [error, setError] = useState('');

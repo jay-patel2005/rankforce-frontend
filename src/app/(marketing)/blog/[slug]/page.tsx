@@ -12,9 +12,9 @@ import NewsletterCTA from '@/components/blog/NewsletterCTA';
 import { IBlogPost } from '@/types/blog';
 
 interface BlogDetailProps {
-  params: {
+  params: Promise<{
     slug: string;
-  };
+  }>;
 }
 
 const API_BASE_URL = process.env.NEXT_PUBLIC_API_URL || 'http://localhost:5000';
@@ -60,7 +60,8 @@ export async function generateMetadata(
   { params }: BlogDetailProps,
   parent: ResolvingMetadata
 ): Promise<Metadata> {
-  const blog = await getBlog(params.slug);
+  const { slug } = await params;
+  const blog = await getBlog(slug);
 
   if (!blog) {
     return {
@@ -93,7 +94,8 @@ export async function generateMetadata(
 }
 
 export default async function BlogDetailPage({ params }: BlogDetailProps) {
-  const blog = await getBlog(params.slug);
+  const { slug } = await params;
+  const blog = await getBlog(slug);
 
   if (!blog) {
     notFound();
@@ -113,7 +115,7 @@ export default async function BlogDetailPage({ params }: BlogDetailProps) {
     }))
   } : null;
 
-  const relatedBlogs = await getRelatedBlogs(params.slug);
+  const relatedBlogs = await getRelatedBlogs(slug);
 
   return (
     <>
@@ -125,8 +127,8 @@ export default async function BlogDetailPage({ params }: BlogDetailProps) {
         />
       )}
       
-      <main className="min-h-screen bg-gray-50 pb-20 pt-24">
-        <article className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
+      <main className="min-h-screen bg-gray-50 pb-20 pt-24 overflow-x-hidden">
+        <article className="w-full max-w-[1100px] mx-auto px-4 sm:px-6 lg:px-8 overflow-hidden">
           
           {/* Breadcrumb */}
           <nav className="flex items-center text-sm text-gray-500 mb-8 pt-8">
@@ -164,18 +166,20 @@ export default async function BlogDetailPage({ params }: BlogDetailProps) {
 
           {/* Featured Image */}
           {blog.featuredImage?.url && (
-            <div className="relative aspect-[16/9] md:aspect-[2/1] rounded-2xl overflow-hidden mb-12 shadow-lg bg-gray-200">
-              <img 
-                src={blog.featuredImage.url} 
-                alt={blog.featuredImageAlt || blog.title}
-                className="w-full h-full object-cover"
-              />
+            <div className="w-full max-w-[950px] mx-auto mt-2 mb-10">
+              <div className="w-full aspect-[1200/628] rounded-2xl overflow-hidden shadow-md bg-gray-200">
+                <img 
+                  src={blog.featuredImage.url} 
+                  alt={blog.featuredImageAlt || blog.title}
+                  className="w-full h-full object-cover"
+                />
+              </div>
             </div>
           )}
 
           {/* Content */}
           <div 
-            className="prose prose-lg prose-orange max-w-none mb-16 text-gray-700 bg-white p-6 sm:p-10 rounded-2xl shadow-sm border border-gray-100"
+            className="blog-content bg-white px-6 sm:px-10 lg:px-12 py-8 sm:py-10 lg:py-12 rounded-2xl shadow-sm border border-gray-100 mb-12 w-full overflow-hidden"
             dangerouslySetInnerHTML={{ __html: blog.content }}
           />
 

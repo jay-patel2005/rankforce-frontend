@@ -19,15 +19,15 @@ export const onPageSeoData: ServicePageData = {
     heading: "What Makes On Page SEO Important for Your Website?",
     paragraphs: [
       "On page refers to everything you can optimize directly on your website's pages to help them rank higher and attract the right visitors — your title tag, headings, keyword usage, internal links, images, and overall page experience.",
-      "It's different from off-page SEO (backlinks, mentions) and technical SEO (speed, crawlability). On-page SEO is the part fully within your control, and it's the foundation everything else is built on. Get it right, and search engines can clearly understand and reward your content.",
+      "It's different from off-page SEO (backlinks, mentions) and technical SEO (speed, crawlability). On Page SEO is the part fully within your control, and it's the foundation everything else is built on. Get it right, and search engines can clearly understand and reward your content.",
       "This is exactly why on page deserves priority — without it, even the best off-page campaigns struggle to hold rankings long-term."
     ],
-    imageSrc: "/images/on-page-seo-diagram.webp",
+    imageSrc: "/images/On Page-seo-diagram.webp",
     imageAlt: "On Page SEO Diagram"
   },
   statBand: {
     badge: "Why We Focus On It",
-    title: "Why On-Page SEO Still Matters in 2026",
+    title: "Why On Page SEO Still Matters in 2026",
     paragraphs: [
       "Search engines have gotten smarter, but they still rely heavily on well-optimized pages to understand relevance, intent, and trustworthiness."
     ],
@@ -37,7 +37,7 @@ export const onPageSeoData: ServicePageData = {
       { value: "+9%", label: "Monthly lead growth", icon: "users", highlightColor: "#FFF1E6" },
       { value: "98%", label: "Client satisfaction rate", icon: "target", highlightColor: "#FFF1E6" },
     ],
-    quote: "On-page SEO isn't a one-time task — it's the ongoing groundwork that makes every other SEO effort actually pay off."
+    quote: "On Page SEO isn't a one-time task — it's the ongoing groundwork that makes every other SEO effort actually pay off."
   },
   tools: {
     title: "Tools We Use For On Page SEO",
@@ -86,11 +86,11 @@ export const onPageSeoData: ServicePageData = {
     badge: "FAQ",
     titleHtml: <>Frequently Asked On Page SEO Questions</>,
     items: [
-      { id: "faq-1", question: "What is the difference between on-page and off-page SEO?", answer: "On-page SEO covers everything you control directly on your website — content, tags, structure. Off-page SEO covers external signals like backlinks and mentions." },
-      { id: "faq-2", question: "How long does on-page SEO take to show results?", answer: "Most sites see measurable movement within 4–8 weeks, though competitive keywords can take longer." },
-      { id: "faq-3", question: "Can I do on-page SEO myself, or do I need on-page SEO services?", answer: "You can start with the checklist above yourself. But if you want faster, more consistent results, professional on-page SEO services are usually worth it." },
-      { id: "faq-4", question: "What on page SEO strategies should I prioritize first?", answer: "Start with title tags, header structure, and matching content to search intent — these on-page SEO strategies typically produce the fastest visible movement." },
-      { id: "faq-5", question: "How often should I check on-page SEO?", answer: "Ideally once a quarter, or whenever you publish new content or notice a ranking drop." },
+      { id: "faq-1", question: "What is the difference between On Page and off-page SEO?", answer: "On Page SEO covers everything you control directly on your website — content, tags, structure. Off-page SEO covers external signals like backlinks and mentions." },
+      { id: "faq-2", question: "How long does On Page SEO take to show results?", answer: "Most sites see measurable movement within 4–8 weeks, though competitive keywords can take longer." },
+      { id: "faq-3", question: "Can I do On Page SEO myself, or do I need On Page SEO services?", answer: "You can start with the checklist above yourself. But if you want faster, more consistent results, professional On Page SEO services are usually worth it." },
+      { id: "faq-4", question: "What on page SEO strategies should I prioritize first?", answer: "Start with title tags, header structure, and matching content to search intent — these On Page SEO strategies typically produce the fastest visible movement." },
+      { id: "faq-5", question: "How often should I check On Page SEO?", answer: "Ideally once a quarter, or whenever you publish new content or notice a ranking drop." },
     ]
   },
   difference: {
@@ -104,8 +104,8 @@ export const onPageSeoData: ServicePageData = {
     ]
   },
   testimonials: [
-    { id: 1, name: "Placeholder Client 1", role: "CEO, Tech Startup", text: "Our on-page SEO was a mess before this — now every page actually targets the right intent.", image: "https://ui-avatars.com/api/?name=Client+1&background=FF6A00&color=fff" },
-    { id: 2, name: "Placeholder Client 2", role: "Founder, Local Business", text: "The on-page SEO audit alone uncovered issues we didn't know existed for years.", image: "https://ui-avatars.com/api/?name=Client+2&background=FF6A00&color=fff" },
+    { id: 1, name: "Placeholder Client 1", role: "CEO, Tech Startup", text: "Our On Page SEO was a mess before this — now every page actually targets the right intent.", image: "https://ui-avatars.com/api/?name=Client+1&background=FF6A00&color=fff" },
+    { id: 2, name: "Placeholder Client 2", role: "Founder, Local Business", text: "The On Page SEO audit alone uncovered issues we didn't know existed for years.", image: "https://ui-avatars.com/api/?name=Client+2&background=FF6A00&color=fff" },
     { id: 3, name: "Placeholder Client 3", role: "Marketing Director", text: "Clear on page SEO strategies, honest reporting, and steady organic growth every month.", image: "https://ui-avatars.com/api/?name=Client+3&background=FF6A00&color=fff" },
   ]
 };

@@ -5,7 +5,7 @@ import { Link2, Trophy, ArrowUpRight, TrendingUp } from "lucide-react";
 
 export default function HeroDashboardCard() {
   return (
-    <div className="relative w-full max-w-[500px] mx-auto perspective-1000 transform md:scale-[0.85] md:origin-right lg:scale-100 lg:origin-center transition-transform">
+    <div className="relative w-full max-w-[480px] mx-auto">
       {/* Background soft blob for depth */}
       <div className="absolute -inset-4 bg-gradient-to-tr from-primary/20 to-orange-400/20 rounded-3xl blur-2xl opacity-60 pointer-events-none" />
 

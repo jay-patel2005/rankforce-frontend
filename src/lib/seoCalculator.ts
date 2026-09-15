@@ -53,19 +53,60 @@ export function calculateSeoScore(data: SeoScoreData): { score: number; categori
     }
   };
 
+  const normalise = (text: string) =>
+    text
+      .replace(/&nbsp;/gi, ' ')
+      .replace(/&#39;/gi, "'")
+      .replace(/&amp;/gi, '&')
+      .replace(/\u00a0/g, ' ')    // non-breaking space → regular space
+      .replace(/\s+/g, ' ')
+      .trim()
+      .toLowerCase();
+
   const hasKeyword = (text: string, keyword: string) => {
     if (!keyword || !text) return false;
-    return text.toLowerCase().includes(keyword.toLowerCase());
+    return normalise(text).includes(normalise(keyword));
   };
   
   const getOccurrences = (text: string, keyword: string) => {
     if (!keyword || !text) return 0;
-    const regex = new RegExp(keyword.replace(/[.*+?^${}()|[\]\\]/g, '\\$&'), 'gi');
-    return (text.match(regex) || []).length;
+    const normText = normalise(text);
+    const normKw = normalise(keyword);
+    const escaped = normKw.replace(/[.*+?^${}()|[\]\\]/g, '\\$&');
+    const regex = new RegExp(escaped, 'gi');
+    return (normText.match(regex) || []).length;
   };
 
-  const plainText = data.content ? data.content.replace(/<[^>]+>/g, ' ') : '';
-  const wordCount = plainText.trim().split(/\s+/).filter(w => w.length > 0).length;
+  // ── Robust HTML → plain text conversion ─────────────────────────────────
+  // 1. Strip Word/Office inline styles that break text analysis
+  const cleanedContent = (data.content || '')
+    .replace(/style="[^"]*"/gi, '')            // remove inline styles (Word paste)
+    .replace(/class="[^"]*"/gi, '')            // remove class attributes
+    .replace(/<!--[\s\S]*?-->/g, '');          // remove HTML comments
+
+  // 2. Insert a space before every block-level closing/opening tag so words
+  //    at tag boundaries don't merge (e.g. </p><p> → " ")
+  const spacedContent = cleanedContent
+    .replace(/<\/(p|div|li|h[1-6]|blockquote|td|th|tr)>/gi, ' ')
+    .replace(/<(br|hr)(\s*\/)?>/gi, ' ');
+
+  // 3. Strip all remaining HTML tags
+  const strippedText = spacedContent.replace(/<[^>]+>/g, ' ');
+
+  // 4. Decode common HTML entities
+  const plainText = strippedText
+    .replace(/&nbsp;/gi, ' ')
+    .replace(/&amp;/gi, '&')
+    .replace(/&lt;/gi, '<')
+    .replace(/&gt;/gi, '>')
+    .replace(/&quot;/gi, '"')
+    .replace(/&#39;/gi, "'")
+    .replace(/&apos;/gi, "'")
+    .replace(/&#\d+;/g, ' ')                  // numeric entities → space
+    .replace(/\s+/g, ' ')                     // collapse whitespace
+    .trim();
+
+  const wordCount = plainText.split(/\s+/).filter(w => w.length > 0).length;
   
   const kw = data.focusKeyword?.trim().toLowerCase();
 

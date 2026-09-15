@@ -146,7 +146,7 @@ export function DesktopMegaMenuPanel({
           className="rounded-xl border border-gray-200 bg-white shadow-[0_20px_40px_-15px_rgba(0,0,0,0.1)]"
           onClick={onClose}
         >
-          <div className="grid grid-cols-3 items-start p-8 divide-x divide-gray-100">
+          <div className="grid grid-cols-2 items-start p-8 divide-x divide-gray-100">
             {servicesMenu.map((category, index) => (
               <motion.div
                 key={category.title}
