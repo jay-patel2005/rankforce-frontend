@@ -139,6 +139,10 @@ export default function AdminLogin() {
         if (res.token) {
           localStorage.setItem('rwd_token', res.token);
         }
+        // Set a same-domain auth marker cookie so Next.js middleware can detect auth state.
+        // The JWT itself is cross-domain (set by the backend), so the middleware cannot read it.
+        // This marker is cleared on logout.
+        document.cookie = 'rwd_auth=1; path=/; max-age=604800; SameSite=Lax';
         await checkAuth();
         router.push('/admin/dashboard');
       } else {

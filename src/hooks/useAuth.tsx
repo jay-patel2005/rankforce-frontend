@@ -57,8 +57,10 @@ export const AuthProvider = ({ children }: { children: ReactNode }) => {
     } catch (error) {
       console.error('Logout error', error);
     } finally {
-      // Always clear the local token and user state
+      // Clear all auth state: localStorage token + auth marker cookie + user context
       localStorage.removeItem('rwd_token');
+      // Clear the same-domain auth marker cookie the middleware reads
+      document.cookie = 'rwd_auth=; path=/; max-age=0; SameSite=Lax';
       setUser(null);
       router.push('/admin/login');
     }
