@@ -2,15 +2,11 @@
 
 import React, { useState, useEffect, useRef } from 'react';
 import { useRouter } from 'next/navigation';
-import dynamic from 'next/dynamic';
-import { Upload, X, Save, Eye, Calendar, Settings } from 'lucide-react';
+import { Upload, X, Save } from 'lucide-react';
 import { createAdminBlog, updateAdminBlog } from '@/lib/apiClient';
 import SeoScoreCalculator from './SeoScoreCalculator';
 import FaqBuilder, { FAQ } from './FaqBuilder';
-import 'react-quill-new/dist/quill.snow.css';
-
-// Dynamically import Quill to avoid SSR issues
-const ReactQuill = dynamic(() => import('react-quill-new'), { ssr: false });
+import RichTextEditor from './RichTextEditor';
 
 const SERVICES = [
   { name: 'SEO Services', slug: 'seo-services' },
@@ -156,20 +152,7 @@ export default function BlogForm({ initialData, isEdit = false }: BlogFormProps)
     }
   };
 
-  // React Quill Modules configuration
-  const quillModules = {
-    toolbar: [
-      [{ header: [1, 2, 3, false] }],
-      ['bold', 'italic', 'underline', 'strike', 'blockquote'],
-      [{ list: 'ordered' }, { list: 'bullet' }],
-      ['link', 'image'],
-      ['clean'],
-    ],
-    clipboard: {
-      // Strips inline styles/fonts when pasting from Word or Google Docs
-      matchVisual: false,
-    },
-  };
+  // Editor config is encapsulated in RichTextEditor.tsx
 
   return (
     <form className="max-w-6xl mx-auto pb-24" onSubmit={(e) => e.preventDefault()}>
@@ -249,17 +232,14 @@ export default function BlogForm({ initialData, isEdit = false }: BlogFormProps)
           </div>
 
           {/* Content Editor */}
-          <div className="bg-white p-6 rounded-xl shadow-sm border border-gray-200">
-             <h2 className="text-lg font-bold text-gray-900 border-b pb-2 mb-4">Blog Content *</h2>
-             <div className="h-[500px] mb-12">
-               <ReactQuill 
-                 theme="snow" 
-                 value={content} 
-                 onChange={setContent}
-                 modules={quillModules}
-                 className="h-full"
-               />
-             </div>
+          <div className="bg-white rounded-xl shadow-sm border border-gray-200">
+            <div className="px-6 pt-6 pb-3 border-b border-gray-100">
+              <h2 className="text-lg font-bold text-gray-900">Blog Content *</h2>
+            </div>
+            <RichTextEditor
+              value={content}
+              onChange={setContent}
+            />
           </div>
 
           {/* FAQs */}
