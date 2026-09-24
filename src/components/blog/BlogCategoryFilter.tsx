@@ -35,8 +35,8 @@ export default function BlogCategoryFilter({ categories, activeCategory, onCateg
                 className={`
                   whitespace-nowrap px-5 py-2.5 rounded-full text-sm font-semibold transition-all duration-200 border
                   ${isActive 
-                    ? 'bg-[#FF6A00] text-white border-[#FF6A00] shadow-md shadow-orange-500/20' 
-                    : 'bg-white text-gray-600 border-gray-200 hover:border-[#FF6A00] hover:text-[#FF6A00] hover:bg-orange-50'
+                    ? 'bg-[#FF6A00] text-white border-[#FF6A00]' 
+                    : 'bg-white text-[#6B6B6B] border-[#E5E7EB] hover:border-[#FF6A00] hover:text-[#FF6A00] hover:bg-[#FFF1E6]'
                   }
                 `}
               >

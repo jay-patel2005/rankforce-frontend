@@ -2,7 +2,6 @@
 
 import React, { useState, useEffect, useMemo } from 'react';
 import BlogHero from '@/components/blog/BlogHero';
-import FeaturedBlog from '@/components/blog/FeaturedBlog';
 import BlogCategoryFilter from '@/components/blog/BlogCategoryFilter';
 import BlogGrid from '@/components/blog/BlogGrid';
 import BlogPagination from '@/components/blog/BlogPagination';
@@ -62,20 +61,7 @@ export default function BlogPage() {
     fetchBlogs();
   }, [currentPage, activeCategory]);
 
-  // Use the first blog on the first page of "All" as featured
-  const featuredPost = useMemo(() => {
-    if (activeCategory === 'All' && currentPage === 1 && blogs.length > 0) {
-      return blogs[0];
-    }
-    return null;
-  }, [blogs, activeCategory, currentPage]);
-
-  const gridPosts = useMemo(() => {
-    if (featuredPost) {
-      return blogs.filter(post => post.id !== featuredPost.id);
-    }
-    return blogs;
-  }, [blogs, featuredPost]);
+  const gridPosts = blogs;
 
   // Handlers
   const handleCategoryChange = (category: string) => {
@@ -91,12 +77,13 @@ export default function BlogPage() {
   return (
     <>
       <Navbar />
-      <main className="min-h-screen bg-white">
-        <BlogHero />
+      <main className="min-h-screen bg-white relative overflow-hidden">
+        {/* Subtle page background decorations */}
+        <div className="absolute top-0 left-0 w-full h-full bg-[#FFFFFF] -z-20" />
+        <div className="absolute top-[20%] left-[-10%] w-[500px] h-[500px] bg-[#FFF1E6] rounded-full blur-[120px] opacity-50 -z-10 pointer-events-none" />
+        <div className="absolute top-[60%] right-[-10%] w-[600px] h-[600px] bg-[#FFF1E6] rounded-full blur-[150px] opacity-40 -z-10 pointer-events-none" />
 
-        {featuredPost && (
-          <FeaturedBlog post={featuredPost} />
-        )}
+        <BlogHero />
 
         <div id="blog-grid" className="scroll-mt-24">
           <BlogCategoryFilter 
@@ -110,7 +97,7 @@ export default function BlogPage() {
           <div className="flex justify-center items-center py-24 text-gray-500">
             Loading latest insights...
           </div>
-        ) : gridPosts.length > 0 || featuredPost ? (
+        ) : gridPosts.length > 0 ? (
           <>
             <BlogGrid posts={gridPosts} />
             
