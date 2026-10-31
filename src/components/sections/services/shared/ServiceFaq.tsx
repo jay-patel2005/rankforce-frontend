@@ -2,7 +2,6 @@
 
 import React, { useState } from 'react';
 import { ChevronDown } from 'lucide-react';
-import { motion, AnimatePresence } from 'framer-motion';
 import { ServiceFaqData } from '@/types/service-page';
 
 export function ServiceFaq({ data }: { data: ServiceFaqData }) {
@@ -38,7 +37,7 @@ export function ServiceFaq({ data }: { data: ServiceFaqData }) {
               >
                 <button
                   onClick={() => toggleFaq(index)}
-                  className="w-full text-left px-6 py-5 md:px-8 md:py-6 flex items-center justify-between focus:outline-none"
+                  className="w-full text-left px-6 py-5 md:px-8 md:py-6 flex items-center justify-between focus:outline-none cursor-pointer"
                   aria-expanded={isOpen}
                   aria-controls={`faq-answer-${index}`}
                 >
@@ -46,26 +45,37 @@ export function ServiceFaq({ data }: { data: ServiceFaqData }) {
                     {faq.question}
                   </span>
                   <ChevronDown 
-                    className={`w-5 h-5 text-[#FF6A00] flex-shrink-0 transition-transform duration-300 ${isOpen ? 'rotate-180' : ''}`} 
+                    className={`w-5 h-5 text-[#FF6A00] flex-shrink-0 transition-transform duration-350 ease-in-out ${
+                      isOpen ? 'rotate-180' : 'rotate-0'
+                    }`} 
                   />
                 </button>
                 
-                <AnimatePresence>
-                  {isOpen && (
-                    <motion.div
-                      id={`faq-answer-${index}`}
-                      initial={{ height: 0, opacity: 0 }}
-                      animate={{ height: "auto", opacity: 1 }}
-                      exit={{ height: 0, opacity: 0 }}
-                      transition={{ duration: 0.3, ease: "easeInOut" }}
-                      className="overflow-hidden"
+                <div
+                  id={`faq-answer-${index}`}
+                  className="grid transition-[grid-template-rows] duration-350 ease-in-out"
+                  style={{
+                    gridTemplateRows: isOpen ? "1fr" : "0fr",
+                    transition: "grid-template-rows 350ms cubic-bezier(0.4, 0, 0.2, 1)",
+                  }}
+                >
+                  <div className="overflow-hidden min-h-0">
+                    <div
+                      className={`px-6 md:px-8 pb-6 md:pb-8 pt-0 text-[16px] leading-[1.7] text-[#4B4B4B] transition-all duration-350 ${
+                        isOpen
+                          ? "opacity-100 translate-y-0"
+                          : "opacity-0 -translate-y-2 pointer-events-none"
+                      }`}
+                      style={{
+                        transitionProperty: "opacity, transform",
+                        transitionDuration: "350ms",
+                        transitionTimingFunction: "cubic-bezier(0.4, 0, 0.2, 1)",
+                      }}
                     >
-                      <div className="px-6 md:px-8 pb-6 md:pb-8 pt-0 text-[16px] leading-[1.7] text-[#4B4B4B]">
-                        {faq.answer}
-                      </div>
-                    </motion.div>
-                  )}
-                </AnimatePresence>
+                      {faq.answer}
+                    </div>
+                  </div>
+                </div>
               </div>
             );
           })}

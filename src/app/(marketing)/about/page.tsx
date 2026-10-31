@@ -9,7 +9,7 @@ export const metadata: Metadata = {
 export default function AboutPage() {
   return (
     <main>
-      <h1>About JD</h1>
+      <h1>About Rank force </h1>
       <p>About page — coming soon.</p>
     </main>
   );

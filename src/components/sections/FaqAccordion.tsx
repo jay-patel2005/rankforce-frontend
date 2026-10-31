@@ -1,7 +1,7 @@
 "use client";
 
 import { motion } from "framer-motion";
-import { Disclosure, Transition } from "@headlessui/react";
+import { Disclosure } from "@headlessui/react";
 import { ChevronDown } from "lucide-react";
 
 const faqs = [
@@ -62,34 +62,47 @@ export default function FaqAccordion() {
               <Disclosure>
                 {({ open }) => (
                   <div
-                    className={`rounded-xl border transition-colors ${
+                    className={`rounded-xl border transition-colors duration-350 ease-in-out ${
                       open
                         ? "border-primary/30 bg-primary-50/50"
                         : "border-gray-border bg-white hover:border-primary/20"
                     }`}
                   >
-                    <Disclosure.Button className="flex w-full items-center justify-between px-6 py-5 text-left focus:outline-none">
+                    <Disclosure.Button className="flex w-full items-center justify-between px-6 py-5 text-left focus:outline-none cursor-pointer">
                       <span className="text-lg font-semibold text-dark-800">
                         {faq.question}
                       </span>
                       <ChevronDown
-                        className={`ml-4 h-5 w-5 shrink-0 text-primary transition-transform duration-200 ${
-                          open ? "rotate-180" : ""
+                        className={`ml-4 h-5 w-5 shrink-0 text-primary transition-transform duration-350 ease-in-out ${
+                          open ? "rotate-180" : "rotate-0"
                         }`}
                       />
                     </Disclosure.Button>
-                    <Transition
-                      enter="transition duration-200 ease-out"
-                      enterFrom="transform scale-95 opacity-0"
-                      enterTo="transform scale-100 opacity-100"
-                      leave="transition duration-75 ease-out"
-                      leaveFrom="transform scale-100 opacity-100"
-                      leaveTo="transform scale-95 opacity-0"
+                    <Disclosure.Panel
+                      static
+                      className="grid"
+                      style={{
+                        gridTemplateRows: open ? "1fr" : "0fr",
+                        transition: "grid-template-rows 350ms cubic-bezier(0.4, 0, 0.2, 1)",
+                      }}
                     >
-                      <Disclosure.Panel className="px-6 pb-5 text-[15px] leading-relaxed text-gray-body">
-                        {faq.answer}
-                      </Disclosure.Panel>
-                    </Transition>
+                      <div className="overflow-hidden min-h-0">
+                        <div
+                          className={`px-6 pb-5 text-[15px] leading-relaxed text-gray-body transition-all duration-350 ${
+                            open
+                              ? "opacity-100 translate-y-0"
+                              : "opacity-0 -translate-y-2 pointer-events-none"
+                          }`}
+                          style={{
+                            transitionProperty: "opacity, transform",
+                            transitionDuration: "350ms",
+                            transitionTimingFunction: "cubic-bezier(0.4, 0, 0.2, 1)",
+                          }}
+                        >
+                          {faq.answer}
+                        </div>
+                      </div>
+                    </Disclosure.Panel>
                   </div>
                 )}
               </Disclosure>

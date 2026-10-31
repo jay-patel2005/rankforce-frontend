@@ -66,7 +66,7 @@ export default function Footer() {
                 <Link href="/" className="transition-colors hover:text-primary">Home</Link>
               </li>
               <li>
-                <Link href="/about" className="transition-colors hover:text-primary">About JD</Link>
+                <Link href="/about" className="transition-colors hover:text-primary">About RankForce</Link>
               </li>
               <li>
                 <Link href="/case-studies" className="transition-colors hover:text-primary">Case Studies</Link>
